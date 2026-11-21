@@ -1,0 +1,616 @@
+{
+ "source": "code",
+ "scannedAt": "2026-11-21",
+ "note": "From the Claude Code session answer. Provenance (~/.claude vs ~/.agents vs account) was not visible.",
+ "items": [
+  {
+   "name": "animatedwebs",
+   "type": "plugin",
+   "use": "Animated sites, heroes, backgrounds, gradients, components."
+  },
+  {
+   "name": "Notion",
+   "type": "plugin",
+   "use": "Notion pages, tasks, rows and search."
+  },
+  {
+   "name": "marketing",
+   "type": "plugin",
+   "use": "Campaigns, SEO, content, email, reports. Bundles MCPs awaiting sign-in."
+  },
+  {
+   "name": "remotion",
+   "type": "plugin",
+   "use": "Remotion video creation."
+  },
+  {
+   "name": "hyperframes",
+   "type": "plugin",
+   "use": "HTML-to-video authoring, CLI, registry and media tools (8 skills). Local HyperFrames route for Claude Code."
+  },
+  {
+   "name": "claude-context-optimizer",
+   "type": "plugin",
+   "use": "cco-* token and context tools."
+  },
+  {
+   "name": "8b-ai-website-builder",
+   "type": "plugin",
+   "use": "The site skill; MCP server still connecting."
+  },
+  {
+   "name": "playwright",
+   "type": "plugin",
+   "use": "Browser automation via MCP; still connecting."
+  },
+  {
+   "name": "context7",
+   "type": "plugin",
+   "use": "Library documentation lookup via MCP; awaiting sign-in."
+  },
+  {
+   "name": "anthropic-skills",
+   "type": "plugin",
+   "use": "Bundle: docx, pdf, pptx, xlsx, docs, deep-research, skill-creator and more."
+  },
+  {
+   "name": "frontend-design",
+   "type": "plugin",
+   "use": "Frontend design skill."
+  },
+  {
+   "name": "21st",
+   "type": "plugin",
+   "use": "21st.dev UI skill."
+  },
+  {
+   "name": "find-skills",
+   "type": "local-skill"
+  },
+  {
+   "name": "hallmark",
+   "type": "local-skill"
+  },
+  {
+   "name": "remotion-best-practices",
+   "type": "local-skill"
+  },
+  {
+   "name": "webapp-testing",
+   "type": "skill"
+  },
+  {
+   "name": "copywriting",
+   "type": "skill"
+  },
+  {
+   "name": "prompt-master",
+   "type": "skill"
+  },
+  {
+   "name": "webgl-concept-report",
+   "type": "skill"
+  },
+  {
+   "name": "venture-design",
+   "type": "skill"
+  },
+  {
+   "name": "feasibility-study",
+   "type": "skill"
+  },
+  {
+   "name": "market-intelligence",
+   "type": "skill"
+  },
+  {
+   "name": "niche-sourcing-engine",
+   "type": "skill"
+  },
+  {
+   "name": "niche-triage-gate",
+   "type": "skill"
+  },
+  {
+   "name": "crucible-standard",
+   "type": "skill"
+  },
+  {
+   "name": "fitts-framework-governance",
+   "type": "skill"
+  },
+  {
+   "name": "framework-mindmap",
+   "type": "skill"
+  },
+  {
+   "name": "board-director-arnault",
+   "type": "skill"
+  },
+  {
+   "name": "business-math-explainer",
+   "type": "skill"
+  },
+  {
+   "name": "notion-filer",
+   "type": "skill"
+  },
+  {
+   "name": "book-critical-analysis",
+   "type": "skill"
+  },
+  {
+   "name": "book-executive-briefing-white-paper",
+   "type": "skill"
+  },
+  {
+   "name": "book-gemini-summary-white-paper",
+   "type": "skill"
+  },
+  {
+   "name": "book-infographic-white-paper",
+   "type": "skill"
+  },
+  {
+   "name": "book-mindmap-navy-signal",
+   "type": "skill"
+  },
+  {
+   "name": "book-summary-deck",
+   "type": "skill"
+  },
+  {
+   "name": "web-build-brief",
+   "type": "skill"
+  },
+  {
+   "name": "web-design-after-action-review",
+   "type": "skill"
+  },
+  {
+   "name": "motionsites-web-builder",
+   "type": "skill"
+  },
+  {
+   "name": "design-brand-kit-creation",
+   "type": "skill"
+  },
+  {
+   "name": "palette-analysis",
+   "type": "skill"
+  },
+  {
+   "name": "luxury-brand-styling",
+   "type": "skill"
+  },
+  {
+   "name": "video-ad-director",
+   "type": "skill"
+  },
+  {
+   "name": "video-prompt-engineer",
+   "type": "skill"
+  },
+  {
+   "name": "seedance-prompt-engineer",
+   "type": "skill"
+  },
+  {
+   "name": "dot-matrix-video",
+   "type": "skill"
+  },
+  {
+   "name": "music-motion-video",
+   "type": "skill"
+  },
+  {
+   "name": "paid-ads",
+   "type": "skill"
+  },
+  {
+   "name": "launch-strategy",
+   "type": "skill"
+  },
+  {
+   "name": "content-strategy",
+   "type": "skill"
+  },
+  {
+   "name": "page-cro",
+   "type": "skill"
+  },
+  {
+   "name": "pricing-strategy",
+   "type": "skill"
+  },
+  {
+   "name": "referral-program",
+   "type": "skill"
+  },
+  {
+   "name": "marketing-ideas",
+   "type": "skill"
+  },
+  {
+   "name": "marketing-psychology",
+   "type": "skill"
+  },
+  {
+   "name": "lead-magnets",
+   "type": "skill"
+  },
+  {
+   "name": "ad-creative",
+   "type": "skill"
+  },
+  {
+   "name": "research-audit-verdict",
+   "type": "skill"
+  },
+  {
+   "name": "learning-reference-guide",
+   "type": "skill"
+  },
+  {
+   "name": "wisdom-db-sync",
+   "type": "skill"
+  },
+  {
+   "name": "ai-weekly-intelligence-briefing",
+   "type": "skill"
+  },
+  {
+   "name": "poetic-voice-devotional",
+   "type": "skill"
+  },
+  {
+   "name": "palette-extender",
+   "type": "skill"
+  },
+  {
+   "name": "product-marketing-context",
+   "type": "skill"
+  },
+  {
+   "name": "email-sequence",
+   "type": "skill"
+  },
+  {
+   "name": "social-content",
+   "type": "skill"
+  },
+  {
+   "name": "spin-analysis",
+   "type": "skill"
+  },
+  {
+   "name": "docx",
+   "type": "skill"
+  },
+  {
+   "name": "pdf",
+   "type": "skill"
+  },
+  {
+   "name": "pptx",
+   "type": "skill"
+  },
+  {
+   "name": "xlsx",
+   "type": "skill"
+  },
+  {
+   "name": "docs",
+   "type": "skill"
+  },
+  {
+   "name": "deep-research",
+   "type": "skill"
+  },
+  {
+   "name": "skill-creator",
+   "type": "skill"
+  },
+  {
+   "name": "canvas-design",
+   "type": "skill"
+  },
+  {
+   "name": "theme-factory",
+   "type": "skill"
+  },
+  {
+   "name": "web-artifacts-builder",
+   "type": "skill"
+  },
+  {
+   "name": "mcp-builder",
+   "type": "skill"
+  },
+  {
+   "name": "morning",
+   "type": "skill"
+  },
+  {
+   "name": "import-memory",
+   "type": "skill"
+  },
+  {
+   "name": "google-workspace",
+   "type": "skill"
+  },
+  {
+   "name": "video-making",
+   "type": "skill"
+  },
+  {
+   "name": "update-config",
+   "type": "skill",
+   "use": "Claude Code built-in. Edit Claude Code settings.",
+   "platform": "code",
+   "evidence": "Listed as a harness built-in by the Claude Code session"
+  },
+  {
+   "name": "keybindings-help",
+   "type": "skill",
+   "use": "Claude Code built-in. Keyboard shortcut help.",
+   "platform": "code",
+   "evidence": "Listed as a harness built-in by the Claude Code session"
+  },
+  {
+   "name": "code-review",
+   "type": "skill",
+   "use": "Claude Code built-in. Review code changes.",
+   "platform": "code",
+   "evidence": "Listed as a harness built-in by the Claude Code session"
+  },
+  {
+   "name": "simplify",
+   "type": "skill",
+   "use": "Claude Code built-in. Simplify changed code.",
+   "platform": "code",
+   "evidence": "Listed as a harness built-in by the Claude Code session"
+  },
+  {
+   "name": "fewer-permission-prompts",
+   "type": "skill",
+   "use": "Claude Code built-in. Reduce permission prompts.",
+   "platform": "code",
+   "evidence": "Listed as a harness built-in by the Claude Code session"
+  },
+  {
+   "name": "loop",
+   "type": "skill",
+   "use": "Claude Code built-in. Run a prompt on a recurring interval.",
+   "platform": "code",
+   "evidence": "Listed as a harness built-in by the Claude Code session"
+  },
+  {
+   "name": "schedule",
+   "type": "skill",
+   "use": "Claude Code built-in. Scheduled tasks.",
+   "platform": "code",
+   "evidence": "Listed as a harness built-in by the Claude Code session"
+  },
+  {
+   "name": "claude-api",
+   "type": "skill",
+   "use": "Claude Code built-in. Build with the Claude API.",
+   "platform": "code",
+   "evidence": "Listed as a harness built-in by the Claude Code session"
+  },
+  {
+   "name": "run",
+   "type": "skill",
+   "use": "Claude Code built-in. Run the project.",
+   "platform": "code",
+   "evidence": "Listed as a harness built-in by the Claude Code session"
+  },
+  {
+   "name": "init",
+   "type": "skill",
+   "use": "Claude Code built-in. Create a CLAUDE.md for a repo.",
+   "platform": "code",
+   "evidence": "Listed as a harness built-in by the Claude Code session"
+  },
+  {
+   "name": "security-review",
+   "type": "skill",
+   "use": "Claude Code built-in. Security review of pending changes.",
+   "platform": "code",
+   "evidence": "Listed as a harness built-in by the Claude Code session"
+  },
+  {
+   "name": "dataviz",
+   "type": "skill",
+   "use": "Built-in guidance skill."
+  },
+  {
+   "name": "artifact-design",
+   "type": "skill",
+   "use": "Built-in guidance skill."
+  },
+  {
+   "name": "artifact-diagramming",
+   "type": "skill",
+   "use": "Built-in guidance skill."
+  },
+  {
+   "name": "artifact-capabilities",
+   "type": "skill",
+   "use": "Built-in guidance skill."
+  },
+  {
+   "name": "plugin-authoring",
+   "type": "skill",
+   "use": "Built-in guidance skill."
+  },
+  {
+   "name": "Gmail",
+   "type": "connector"
+  },
+  {
+   "name": "Google Calendar",
+   "type": "connector"
+  },
+  {
+   "name": "Google Drive",
+   "type": "connector"
+  },
+  {
+   "name": "Google Docs",
+   "type": "connector"
+  },
+  {
+   "name": "Google Sheets",
+   "type": "connector"
+  },
+  {
+   "name": "Google Slides",
+   "type": "connector"
+  },
+  {
+   "name": "Notion",
+   "type": "connector"
+  },
+  {
+   "name": "Canva",
+   "type": "connector"
+  },
+  {
+   "name": "Netlify",
+   "type": "connector"
+  },
+  {
+   "name": "Lucid",
+   "type": "connector"
+  },
+  {
+   "name": "Make",
+   "type": "connector"
+  },
+  {
+   "name": "HyperFrames by HeyGen",
+   "type": "connector"
+  },
+  {
+   "name": "Magnific",
+   "type": "connector"
+  },
+  {
+   "name": "HiggsField",
+   "type": "connector"
+  },
+  {
+   "name": "OpusClip",
+   "type": "connector"
+  },
+  {
+   "name": "AnimatedWebs MCP",
+   "type": "connector"
+  },
+  {
+   "name": "Zoom for Claude",
+   "type": "connector"
+  },
+  {
+   "name": "GoDaddy",
+   "type": "connector"
+  },
+  {
+   "name": "21st Dev",
+   "type": "connector"
+  },
+  {
+   "name": "Claude Docs",
+   "type": "connector",
+   "use": "Create and edit living docs in Claude."
+  },
+  {
+   "name": "Skillry",
+   "type": "mcp"
+  },
+  {
+   "name": "Control Chrome",
+   "type": "mcp"
+  },
+  {
+   "name": "claude-in-chrome",
+   "type": "mcp"
+  },
+  {
+   "name": "Claude_Browser",
+   "type": "mcp"
+  },
+  {
+   "name": "mcp-registry",
+   "type": "mcp",
+   "use": "Search and suggest connectors."
+  },
+  {
+   "name": "scheduled-tasks",
+   "type": "mcp",
+   "use": "Create and manage scheduled tasks."
+  },
+  {
+   "name": "terminal",
+   "type": "mcp",
+   "use": "Terminal access in the desktop app."
+  },
+  {
+   "name": "visualize",
+   "type": "mcp",
+   "use": "Inline visuals and widgets."
+  },
+  {
+   "name": "iOS Simulator",
+   "type": "mcp",
+   "use": "Drive the iOS Simulator."
+  },
+  {
+   "name": "Claude desktop app servers (ccd_*)",
+   "type": "mcp",
+   "use": "Session, sidebar, settings, PR and window controls. Internal to the app."
+  },
+  {
+   "name": "Ahrefs",
+   "type": "mcp",
+   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+  },
+  {
+   "name": "Amplitude",
+   "type": "mcp",
+   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+  },
+  {
+   "name": "Figma",
+   "type": "mcp",
+   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+  },
+  {
+   "name": "HubSpot",
+   "type": "mcp",
+   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+  },
+  {
+   "name": "Klaviyo",
+   "type": "mcp",
+   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+  },
+  {
+   "name": "Similarweb",
+   "type": "mcp",
+   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+  },
+  {
+   "name": "Slack",
+   "type": "mcp",
+   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+  },
+  {
+   "name": "Supermetrics",
+   "type": "mcp",
+   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+  }
+ ]
+}

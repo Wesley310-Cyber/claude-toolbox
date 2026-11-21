@@ -1,0 +1,2383 @@
+{
+ "version": 1,
+ "scanned": "2026-11-21",
+ "sources": {
+  "chat": "2026-11-21",
+  "code": "2026-11-21"
+ },
+ "groups": [
+  {
+   "id": "venture",
+   "cat": "skills",
+   "name": "Venture pipeline",
+   "blurb": "Your Digital Entrepreneurship stages, from niche sourcing to launch blueprint.",
+   "items": [
+    {
+     "name": "niche-sourcing-engine",
+     "platform": "both",
+     "use": "Phase 1: sweep the six vectors for raw niche candidates.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "niche-triage-gate",
+     "platform": "both",
+     "use": "Phase 1: REJECT / PARK / ADVANCE verdicts on a candidate set.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "market-intelligence",
+     "platform": "chat",
+     "use": "Stage 1: market white paper using live web research.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "spin-analysis",
+     "platform": "chat",
+     "use": "Stage 2: buyer psychology and positioning from the Stage 1 paper.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "feasibility-study",
+     "platform": "both",
+     "use": "Stage 3: the 14/20 gate before Venture Design.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "venture-design",
+     "platform": "both",
+     "use": "Stage 4: launch-ready blueprint and launch brief.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "crucible-standard",
+     "platform": "both",
+     "use": "Stress-test or red-team a plan already in the system.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "research-audit-verdict",
+     "platform": "both",
+     "use": "Spot-check an outside AI research report and give a verdict.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "board-director-arnault",
+     "platform": "both",
+     "use": "Virtual board director for luxury, brand and acquisition decisions.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fitts",
+   "cat": "skills",
+   "name": "Fitts Framework",
+   "blurb": "Keeping the Framework, its books and its wisdom database consistent.",
+   "items": [
+    {
+     "name": "fitts-framework-governance",
+     "platform": "both",
+     "use": "Decide whether a concept earns a slot in the 8 values / 96 principles.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "book-critical-analysis",
+     "platform": "both",
+     "use": "Run a book against the Framework and keep what is useful.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "wisdom-db-sync",
+     "platform": "both",
+     "use": "Write extracted quotes into the Notion wisdom database.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "framework-mindmap",
+     "platform": "both",
+     "use": "Rebuild the interactive Framework mind map and version diff.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "books",
+   "cat": "skills",
+   "name": "Book study",
+   "blurb": "Turning a book and its NotebookLM or Gemini summary into decks, sites and maps.",
+   "items": [
+    {
+     "name": "book-summary-deck",
+     "platform": "both",
+     "use": "40-slide learning deck in the Pall Mall White Paper kit.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "book-executive-briefing-white-paper",
+     "platform": "both",
+     "use": "Executive-briefing site deployed to Netlify.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "book-gemini-summary-white-paper",
+     "platform": "both",
+     "use": "Gemini Summary site deployed to Netlify.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "book-infographic-white-paper",
+     "platform": "both",
+     "use": "16:9 isometric infographic from a Drive study folder.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "book-mindmap-navy-signal",
+     "platform": "both",
+     "use": "Interactive book mind map as one HTML file on Netlify.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "learning-reference-guide",
+     "platform": "both",
+     "use": "Turn a transcript or tutorial into a reference card.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "brand",
+   "cat": "skills",
+   "name": "Brand & palette",
+   "blurb": "New palettes, brand kits and your house visual styles.",
+   "items": [
+    {
+     "name": "palette-analysis",
+     "platform": "both",
+     "use": "Evaluate a palette, post to Notion, build the landing page.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "palette-extender",
+     "platform": "both",
+     "use": "Extend 3 colors to a contrast-checked 5-color palette.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "design-brand-kit-creation",
+     "platform": "both",
+     "use": "Three colorways as a Claude Design system, canvas and Notion page.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "luxury-brand-styling",
+     "platform": "both",
+     "use": "Magnus Unus luxury look: Italiana + Outfit, Forest Study palette.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "webgl-concept-report",
+     "platform": "both",
+     "use": "WebGL concept report where palette and shader show the verdict.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "canvas-design",
+     "platform": "both",
+     "use": "Posters and static art as PNG or PDF.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "theme-factory",
+     "platform": "both",
+     "use": "Apply one of ten themes to a doc, deck or page.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "web",
+   "cat": "skills",
+   "name": "Web building",
+   "blurb": "From a small-business idea to a deployed site.",
+   "items": [
+    {
+     "name": "web-build-brief",
+     "platform": "both",
+     "use": "Goal/Layout/Content/Audience brief, then a Claude Code build plan.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "motionsites-web-builder",
+     "platform": "both",
+     "use": "Cinematic sites with a screenshot-and-fix loop (needs local files and a browser).",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "web-design-after-action-review",
+     "platform": "both",
+     "use": "Lessons-learned review of a finished build, filed to Notion.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "frontend-design",
+     "platform": "both",
+     "use": "Distinctive UI direction: type, color and layout choices.",
+     "confirmed": false,
+     "status": "active"
+    },
+    {
+     "name": "web-artifacts-builder",
+     "platform": "chat",
+     "use": "Multi-component React artifacts inside Claude.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "video",
+   "cat": "skills",
+   "name": "Video & motion",
+   "blurb": "Explainers, motion graphics and AI video prompts.",
+   "items": [
+    {
+     "name": "business-math-explainer",
+     "platform": "code",
+     "use": "70-second MagnaDiem explainer, built in Claude Code with HyperFrames.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "dot-matrix-video",
+     "platform": "both",
+     "use": "15-second Black Dot Matrix motion video, three options per concept.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "music-motion-video",
+     "platform": "both",
+     "use": "Orbs across a 3D music sheet synced to a song.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "video-ad-director",
+     "platform": "both",
+     "use": "Concepts, scripts, storyboards and critique for video ads.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "video-prompt-engineer",
+     "platform": "both",
+     "use": "Generation-ready video prompts for Higgsfield or Google Flow.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "seedance-prompt-engineer",
+     "platform": "both",
+     "use": "JSON prompts for Seedance 2.0.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mkt",
+   "cat": "skills",
+   "name": "Marketing & growth",
+   "blurb": "Your marketing playbook skills.",
+   "items": [
+    {
+     "name": "product-marketing-context",
+     "platform": "both",
+     "use": "Foundation doc the other marketing skills read; start here.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "launch-strategy",
+     "platform": "both",
+     "use": "Launch plan and checklist.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "copywriting",
+     "platform": "both",
+     "use": "Headlines, page copy, CTAs.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "page-cro",
+     "platform": "both",
+     "use": "Fix a page that is not converting.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "email-sequence",
+     "platform": "both",
+     "use": "Drip, welcome and nurture flows.",
+     "confirmed": false,
+     "status": "active"
+    },
+    {
+     "name": "social-content",
+     "platform": "both",
+     "use": "Posts, threads, reels and short-form scripts.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "content-strategy",
+     "platform": "both",
+     "use": "What to publish and why.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "paid-ads",
+     "platform": "both",
+     "use": "Campaign strategy for Google, Meta, LinkedIn.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "ad-creative",
+     "platform": "both",
+     "use": "Ad copy variations at scale.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "pricing-strategy",
+     "platform": "both",
+     "use": "Tiers, packaging, willingness to pay.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "lead-magnets",
+     "platform": "both",
+     "use": "Plan an opt-in offer and how to distribute it.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "referral-program",
+     "platform": "both",
+     "use": "Referral and affiliate design.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "marketing-ideas",
+     "platform": "both",
+     "use": "Brainstorm when you are stuck.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "marketing-psychology",
+     "platform": "both",
+     "use": "Apply buyer-behavior principles.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "util",
+   "cat": "skills",
+   "name": "Utilities",
+   "blurb": "Filing, prompts, research and skill-building helpers.",
+   "items": [
+    {
+     "name": "notion-filer",
+     "platform": "both",
+     "use": "File outputs to the right Notion parent with your house titles.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "prompt-master",
+     "platform": "both",
+     "use": "Write or fix a prompt for another AI tool.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "deep-research",
+     "platform": "chat",
+     "use": "Multi-source research report using subagents.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "skill-creator",
+     "platform": "both",
+     "use": "Create, test and improve skills.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "mcp-builder",
+     "platform": "both",
+     "use": "Build an MCP server (needs a local project).",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "docs",
+     "platform": "chat",
+     "use": "Create and edit shared Claude Docs.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "google-workspace",
+     "platform": "both",
+     "use": "Create or edit Google Docs, Sheets and Slides in Drive.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "ai-weekly-intelligence-briefing",
+     "platform": "both",
+     "use": "Weekly summary of the Rundown newsletter.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "poetic-voice-devotional",
+     "platform": "both",
+     "use": "Rewrite a statement in the devotional poetic voice.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "morning / import-memory",
+     "platform": "both",
+     "use": "Morning brief artifact; import memory from another assistant.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p-8b",
+   "cat": "plugins",
+   "name": "8B Website Builder",
+   "blurb": "Plugin 7c3da6d7. Animated sites in the chat; describe, preview, change in plain words.",
+   "items": [
+    {
+     "name": "/site",
+     "platform": "chat",
+     "use": "Build a website or landing page and see it live. The plugin says it runs in the chat.",
+     "confirmed": true,
+     "status": "active"
+    }
+   ],
+   "aliases": [
+    "8b-ai-website-builder",
+    "8B Website Builder"
+   ],
+   "seenBy": [
+    "chat"
+   ]
+  },
+  {
+   "id": "p-aw",
+   "cat": "plugins",
+   "name": "AnimatedWebs",
+   "blurb": "Plugin 0a8fcfe9. 1,600+ templates, video heroes, WebGL gradients, components. Includes a 15-tool MCP.",
+   "items": [
+    {
+     "name": "/site",
+     "platform": "both",
+     "use": "Complete animated site from the best-matching template.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/hero",
+     "platform": "both",
+     "use": "Cinematic hero section for an existing site.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/background",
+     "platform": "both",
+     "use": "Looping video background.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/gradient",
+     "platform": "both",
+     "use": "Live WebGL gradient background.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/component",
+     "platform": "both",
+     "use": "Animated buttons, text effects, cards, loaders.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/style",
+     "platform": "both",
+     "use": "Design system tokens as DESIGN.md, Tailwind or CSS variables.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/browse, /save, /request",
+     "platform": "both",
+     "use": "Browse templates, keep favorites, ask for a missing template.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/design",
+     "platform": "code",
+     "use": "Connect AnimatedWebs Design Studio to Claude Code.",
+     "confirmed": true,
+     "status": "active"
+    }
+   ],
+   "aliases": [
+    "animatedwebs"
+   ],
+   "seenBy": [
+    "code",
+    "chat"
+   ]
+  },
+  {
+   "id": "p-cco",
+   "cat": "plugins",
+   "name": "Context Optimizer (CCO)",
+   "blurb": "Plugin 43b5eda8. Cuts wasted context and shows what each Claude Code session costs. Runs locally.",
+   "items": [
+    {
+     "name": "/cco",
+     "platform": "code",
+     "use": "One-screen control center: budget, spend, tokens saved.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/cco-pack",
+     "platform": "code",
+     "use": "Ranked file list to load for a task.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/cco-budget",
+     "platform": "code",
+     "use": "Token budget and auto-compact settings.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/cco-claudemd",
+     "platform": "code",
+     "use": "Find token bloat in CLAUDE.md files.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/cco-overhead",
+     "platform": "code",
+     "use": "Audit the fixed context every session starts with.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/cco-task",
+     "platform": "code",
+     "use": "Task state that survives /compact.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/cco-coach",
+     "platform": "code",
+     "use": "Grade the last prompt and suggest improvements.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/cco-doctor, /cco-report, /cco-roi and others",
+     "platform": "code",
+     "use": "Health check, ROI reports, digests, exports.",
+     "confirmed": true,
+     "status": "active"
+    }
+   ],
+   "aliases": [
+    "claude-context-optimizer",
+    "cco"
+   ],
+   "seenBy": [
+    "chat"
+   ]
+  },
+  {
+   "id": "p-rem",
+   "cat": "plugins",
+   "name": "Remotion",
+   "blurb": "Plugin c21dd3e3. Programmatic video with React.",
+   "items": [
+    {
+     "name": "remotion-create / -studio / -render",
+     "platform": "code",
+     "use": "Create a video, preview it, export it. Needs Node and local files.",
+     "confirmed": false,
+     "status": "active"
+    },
+    {
+     "name": "remotion-captions / -multimedia / -markup",
+     "platform": "code",
+     "use": "Captions, audio and video handling, animation and effects.",
+     "confirmed": false,
+     "status": "active"
+    },
+    {
+     "name": "remotion-saas / -maps / -docs / -upgrade",
+     "platform": "code",
+     "use": "Embed video in an app, map animation, docs search, upgrades.",
+     "confirmed": false,
+     "status": "active"
+    }
+   ],
+   "aliases": [
+    "remotion"
+   ],
+   "seenBy": [
+    "code",
+    "chat"
+   ]
+  },
+  {
+   "id": "p-not",
+   "cat": "plugins",
+   "name": "Notion plugin",
+   "blurb": "Plugin b2be6e33. Notion skills plus the Notion MCP, packaged as a Claude Code plugin.",
+   "items": [
+    {
+     "name": "/search, /find, /database-query",
+     "platform": "both",
+     "use": "Look things up in your workspace.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "/create-page, /create-task, /create-database-row",
+     "platform": "both",
+     "use": "Add pages, tasks and rows.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "notion-knowledge-capture",
+     "platform": "both",
+     "use": "Turn a conversation into structured pages.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "notion-research-documentation",
+     "platform": "both",
+     "use": "Synthesize across pages into a report.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "notion-spec-to-implementation, /tasks:plan, /tasks:build",
+     "platform": "both",
+     "use": "Turn a spec page into tasks Claude Code can build.",
+     "confirmed": true,
+     "status": "active"
+    }
+   ],
+   "aliases": [
+    "Notion"
+   ],
+   "seenBy": [
+    "chat"
+   ]
+  },
+  {
+   "id": "p-mk",
+   "cat": "plugins",
+   "name": "Marketing plugin",
+   "blurb": "Plugin 88ac0c0d. Content, campaigns and performance reporting.",
+   "items": [
+    {
+     "name": "campaign-plan",
+     "platform": "both",
+     "use": "Full campaign brief with calendar and metrics.",
+     "confirmed": false,
+     "status": "active"
+    },
+    {
+     "name": "draft-content / content-creation",
+     "platform": "both",
+     "use": "Blog, social, email, landing page drafts.",
+     "confirmed": false,
+     "status": "active"
+    },
+    {
+     "name": "seo-audit",
+     "platform": "both",
+     "use": "Keyword, on-page and technical audit.",
+     "confirmed": false,
+     "status": "active"
+    },
+    {
+     "name": "competitive-brief",
+     "platform": "both",
+     "use": "Positioning comparison and content gaps.",
+     "confirmed": false,
+     "status": "active"
+    },
+    {
+     "name": "performance-report",
+     "platform": "both",
+     "use": "Channel report with wins, misses and next steps.",
+     "confirmed": false,
+     "status": "active"
+    },
+    {
+     "name": "brand-review",
+     "platform": "both",
+     "use": "Check a draft against your brand voice.",
+     "confirmed": false,
+     "status": "active"
+    },
+    {
+     "name": "email-sequence",
+     "platform": "both",
+     "use": "Multi-email flow with timing and branching.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    }
+   ],
+   "aliases": [
+    "marketing"
+   ],
+   "seenBy": [
+    "chat"
+   ]
+  },
+  {
+   "id": "p-fe",
+   "cat": "plugins",
+   "name": "Frontend Design",
+   "blurb": "Plugin 2ca4e30e. Visual direction for UI work.",
+   "items": [
+    {
+     "name": "frontend-design",
+     "platform": "both",
+     "use": "Aesthetic direction, typography and non-template layout choices.",
+     "confirmed": false,
+     "status": "active"
+    }
+   ],
+   "aliases": [
+    "frontend-design"
+   ],
+   "seenBy": [
+    "code",
+    "chat"
+   ]
+  },
+  {
+   "id": "p-pw",
+   "cat": "plugins",
+   "name": "Playwright",
+   "blurb": "Plugin 22bf1341. Browser automation and testing, running on your Mac.",
+   "items": [
+    {
+     "name": "browser_navigate, click, type, fill_form",
+     "platform": "code",
+     "use": "Drive a real browser on your Mac to test a site.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "browser_take_screenshot, snapshot",
+     "platform": "code",
+     "use": "Screenshot a page for the screenshot-and-fix loop.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "browser_console_messages, network_requests",
+     "platform": "code",
+     "use": "Debug a page from its console and network log.",
+     "confirmed": true,
+     "status": "active"
+    }
+   ],
+   "aliases": [
+    "playwright"
+   ],
+   "seenBy": [
+    "code",
+    "chat"
+   ]
+  },
+  {
+   "id": "p-21",
+   "cat": "plugins",
+   "name": "21st.dev",
+   "blurb": "Plugin 3d3808fa. UI components, themes and logos.",
+   "items": [
+    {
+     "name": "21st-ui skill",
+     "platform": "both",
+     "use": "Find and install a UI component, or generate one from a prompt.",
+     "confirmed": false,
+     "status": "active"
+    },
+    {
+     "name": "21st Dev connector",
+     "platform": "both",
+     "use": "Search components, themes, logos and inspiration.",
+     "confirmed": true,
+     "status": "active"
+    }
+   ],
+   "aliases": [
+    "21st"
+   ],
+   "seenBy": [
+    "chat"
+   ]
+  },
+  {
+   "id": "c-docs",
+   "cat": "connectors",
+   "name": "Docs, mail & meetings",
+   "blurb": "Your files, calendar and conversations.",
+   "items": [
+    {
+     "name": "Notion",
+     "platform": "both",
+     "use": "Search, create and update pages and databases.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "Google Drive",
+     "platform": "both",
+     "use": "Search, read and upload files.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "Google Docs",
+     "platform": "both",
+     "use": "Read and edit documents.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "Google Sheets",
+     "platform": "both",
+     "use": "Read and update spreadsheets.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "Google Slides",
+     "platform": "both",
+     "use": "Read and edit decks.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "Google Calendar",
+     "platform": "both",
+     "use": "Events and scheduling.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "Zoom for Claude",
+     "platform": "both",
+     "use": "Search and recap meetings.",
+     "confirmed": true,
+     "status": "active",
+     "aliases": [
+      "Zoom"
+     ],
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "Gmail",
+     "platform": "both",
+     "use": "Drafts and inbox search. Needs reconnecting before use.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c-design",
+   "cat": "connectors",
+   "name": "Design & visuals",
+   "blurb": "Make and edit images, layouts and diagrams.",
+   "items": [
+    {
+     "name": "Canva",
+     "platform": "both",
+     "use": "Create, autofill and export designs.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "Magnific",
+     "platform": "both",
+     "use": "Images, video, audio, 3D and brand kits.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "Lucid",
+     "platform": "both",
+     "use": "Flowcharts, mind maps and whiteboards.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "21st Dev",
+     "platform": "both",
+     "use": "UI components and themes.",
+     "confirmed": true,
+     "status": "active",
+     "aliases": [
+      "21st.dev"
+     ],
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "AnimatedWebs MCP",
+     "platform": "both",
+     "use": "Templates, backgrounds and style references.",
+     "confirmed": true,
+     "status": "active",
+     "aliases": [
+      "AnimatedWebs connector"
+     ],
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c-video",
+   "cat": "connectors",
+   "name": "Video & audio",
+   "blurb": "Generate, edit and clip video.",
+   "items": [
+    {
+     "name": "HiggsField",
+     "platform": "both",
+     "use": "Image, video and audio generation, ads studio, websites.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "HyperFrames by HeyGen",
+     "platform": "chat",
+     "use": "Compose and render hosted video projects. Its own instructions disable compose/render from Claude Code, where you use the local HyperFrames skills instead.",
+     "confirmed": true,
+     "status": "active",
+     "aliases": [
+      "HeyGen HyperFrames",
+      "hyperframes connector"
+     ],
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "OpusClip",
+     "platform": "both",
+     "use": "Turn long videos into short clips and schedule them.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c-ship",
+   "cat": "connectors",
+   "name": "Ship & automate",
+   "blurb": "Deploy, name and automate.",
+   "items": [
+    {
+     "name": "Netlify",
+     "platform": "both",
+     "use": "Deploy and manage sites. Deploy a private draft first.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "GoDaddy",
+     "platform": "both",
+     "use": "Check and suggest domain names.",
+     "confirmed": true,
+     "status": "active",
+     "aliases": [
+      "domain-search connector"
+     ],
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    },
+    {
+     "name": "Make",
+     "platform": "both",
+     "use": "Build and run automation scenarios.",
+     "confirmed": true,
+     "status": "active",
+     "aliases": [
+      "Make.com"
+     ],
+     "seenBy": [
+      "code",
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "l-mcp",
+   "cat": "local",
+   "name": "Local servers",
+   "blurb": "MCP servers running on your Mac. They only exist where your computer is linked.",
+   "items": [
+    {
+     "name": "Playwright",
+     "platform": "code",
+     "use": "Browser automation (from the Playwright plugin).",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "Filesystem",
+     "platform": "code",
+     "use": "Read and write files. Scoped to the _Business_Math_Explainer_Template folder only.",
+     "confirmed": true,
+     "status": "active"
+    },
+    {
+     "name": "Control Chrome",
+     "platform": "code",
+     "use": "Drive your Chrome tabs.",
+     "confirmed": true,
+     "status": "active",
+     "aliases": [
+      "Control_Chrome"
+     ],
+     "seenBy": [
+      "code"
+     ]
+    },
+    {
+     "name": "Skillry",
+     "platform": "code",
+     "use": "Search, install and update agent skills.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "l-skills",
+   "cat": "local",
+   "name": "Local skills (~/.agents)",
+   "blurb": "Skill folders read from your Mac. Installed Nov 12 to 15 via the skills CLI.",
+   "items": [
+    {
+     "name": "hallmark",
+     "platform": "code",
+     "use": "Design skill for sites that look designed: dealt direction, themes, lint scripts. Source Nutlope/hallmark.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ]
+    },
+    {
+     "name": "find-skills",
+     "platform": "code",
+     "use": "Discover and install skills from the open ecosystem. Source vercel-labs/skills.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ]
+    },
+    {
+     "name": "remotion-best-practices",
+     "platform": "code",
+     "use": "Remotion router skill. Same source as the Remotion plugin.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "l-browse",
+   "cat": "local",
+   "name": "Browsers & computer",
+   "blurb": "Ways Claude can act on live sites and apps through the desktop app.",
+   "items": [
+    {
+     "name": "Built-in browser",
+     "platform": "both",
+     "use": "Pane inside the Claude desktop app with its own sign-ins. Your preferred browser.",
+     "confirmed": false,
+     "status": "active",
+     "aliases": [
+      "Claude_Browser"
+     ],
+     "seenBy": [
+      "chat"
+     ]
+    },
+    {
+     "name": "Claude in Chrome",
+     "platform": "both",
+     "use": "Your real Chrome with your sign-ins.",
+     "confirmed": false,
+     "status": "active",
+     "aliases": [
+      "claude-in-chrome"
+     ],
+     "seenBy": [
+      "code"
+     ]
+    },
+    {
+     "name": "Computer use",
+     "platform": "both",
+     "use": "Operate desktop apps by screenshot, click and type.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "chat"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "new-plugins",
+   "cat": "plugins",
+   "name": "New plugins",
+   "blurb": "Found by a scan and not sorted into a group yet. Move each into the right group in toolbox.json.",
+   "items": [
+    {
+     "name": "hyperframes",
+     "platform": "code",
+     "use": "HTML-to-video authoring, CLI, registry and media tools (8 skills). Local HyperFrames route for Claude Code.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "context7",
+     "platform": "code",
+     "use": "Library documentation lookup via MCP; awaiting sign-in.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "anthropic-skills",
+     "platform": "code",
+     "use": "Bundle: docx, pdf, pptx, xlsx, docs, deep-research, skill-creator and more.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    }
+   ]
+  },
+  {
+   "id": "new-skills",
+   "cat": "skills",
+   "name": "New skills",
+   "blurb": "Found by a scan and not sorted into a group yet. Move each into the right group in toolbox.json.",
+   "items": [
+    {
+     "name": "webapp-testing",
+     "platform": "code",
+     "use": "New. Add a one-line use case.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "docx",
+     "platform": "both",
+     "use": "New. Add a one-line use case.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "pdf",
+     "platform": "both",
+     "use": "New. Add a one-line use case.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "pptx",
+     "platform": "both",
+     "use": "New. Add a one-line use case.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "xlsx",
+     "platform": "both",
+     "use": "New. Add a one-line use case.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "video-making",
+     "platform": "both",
+     "use": "New. Add a one-line use case.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "update-config",
+     "platform": "code",
+     "use": "Claude Code built-in. Edit Claude Code settings.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "keybindings-help",
+     "platform": "code",
+     "use": "Claude Code built-in. Keyboard shortcut help.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "code-review",
+     "platform": "code",
+     "use": "Claude Code built-in. Review code changes.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "simplify",
+     "platform": "code",
+     "use": "Claude Code built-in. Simplify changed code.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "fewer-permission-prompts",
+     "platform": "code",
+     "use": "Claude Code built-in. Reduce permission prompts.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "loop",
+     "platform": "code",
+     "use": "Claude Code built-in. Run a prompt on a recurring interval.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "schedule",
+     "platform": "code",
+     "use": "Claude Code built-in. Scheduled tasks.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "claude-api",
+     "platform": "code",
+     "use": "Claude Code built-in. Build with the Claude API.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "run",
+     "platform": "code",
+     "use": "Claude Code built-in. Run the project.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "init",
+     "platform": "code",
+     "use": "Claude Code built-in. Create a CLAUDE.md for a repo.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "security-review",
+     "platform": "code",
+     "use": "Claude Code built-in. Security review of pending changes.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "dataviz",
+     "platform": "both",
+     "use": "Built-in guidance skill.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "artifact-design",
+     "platform": "both",
+     "use": "Built-in guidance skill.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "artifact-diagramming",
+     "platform": "both",
+     "use": "Built-in guidance skill.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "artifact-capabilities",
+     "platform": "both",
+     "use": "Built-in guidance skill.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "plugin-authoring",
+     "platform": "both",
+     "use": "Built-in guidance skill.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "chrome-browser",
+     "platform": "chat",
+     "use": "New. Add a one-line use case.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "file-reading",
+     "platform": "chat",
+     "use": "New. Add a one-line use case.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "pdf-reading",
+     "platform": "chat",
+     "use": "New. Add a one-line use case.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "product-self-knowledge",
+     "platform": "chat",
+     "use": "New. Add a one-line use case.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "explain-usage",
+     "platform": "chat",
+     "use": "New. Add a one-line use case.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "setup-claude",
+     "platform": "chat",
+     "use": "New. Add a one-line use case.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "cowork-plugin",
+     "platform": "chat",
+     "use": "New. Add a one-line use case.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    }
+   ]
+  },
+  {
+   "id": "new-connectors",
+   "cat": "connectors",
+   "name": "New connectors",
+   "blurb": "Found by a scan and not sorted into a group yet. Move each into the right group in toolbox.json.",
+   "items": [
+    {
+     "name": "Claude Docs",
+     "platform": "both",
+     "use": "Create and edit living docs in Claude.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "mcp-registry",
+     "platform": "code",
+     "use": "Search and suggest connectors.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "scheduled-tasks",
+     "platform": "code",
+     "use": "Create and manage scheduled tasks.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "terminal",
+     "platform": "code",
+     "use": "Terminal access in the desktop app.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "visualize",
+     "platform": "code",
+     "use": "Inline visuals and widgets.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "iOS Simulator",
+     "platform": "code",
+     "use": "Drive the iOS Simulator.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Claude desktop app servers (ccd_*)",
+     "platform": "code",
+     "use": "Session, sidebar, settings, PR and window controls. Internal to the app.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Ahrefs",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Amplitude",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Figma",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "HubSpot",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Klaviyo",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Similarweb",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Slack",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Supermetrics",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    }
+   ]
+  }
+ ],
+ "projects": [
+  {
+   "id": "site",
+   "name": "Website for a small business",
+   "why": "Brief and look in chat, build and test in Claude Code, deploy a private draft first and go public at launch.",
+   "steps": "Order: brief → look → build → test → private deploy → launch.",
+   "items": [
+    {
+     "name": "web-build-brief",
+     "where": "chat",
+     "use": "Goal/Layout/Content/Audience brief and the Claude Code build plan."
+    },
+    {
+     "name": "design-brand-kit-creation",
+     "where": "chat",
+     "use": "Three colorway options to react to before building."
+    },
+    {
+     "name": "Canva / Magnific / HiggsField",
+     "where": "chat",
+     "use": "Imagery and mood boards."
+    },
+    {
+     "name": "GoDaddy",
+     "where": "chat",
+     "use": "Check the domain."
+    },
+    {
+     "name": "hallmark",
+     "where": "code",
+     "use": "Design direction and lint for the build."
+    },
+    {
+     "name": "AnimatedWebs plugin",
+     "where": "code",
+     "use": "Cinematic hero, backgrounds, components from templates."
+    },
+    {
+     "name": "frontend-design",
+     "where": "code",
+     "use": "Polish the type and layout."
+    },
+    {
+     "name": "Playwright",
+     "where": "code",
+     "use": "Screenshot and test the site locally."
+    },
+    {
+     "name": "CCO",
+     "where": "code",
+     "use": "Keep long builds from wasting context."
+    },
+    {
+     "name": "Netlify",
+     "where": "either",
+     "use": "Private draft deploy, then public at launch."
+    },
+    {
+     "name": "web-design-after-action-review",
+     "where": "either",
+     "use": "Lessons learned once it ships."
+    }
+   ]
+  },
+  {
+   "id": "venture",
+   "name": "Venture research & validation",
+   "why": "This is a thinking-and-documents job, so almost all of it lives comfortably in chat.",
+   "steps": "Order: sourcing → triage → Stage 1 → Stage 2 → Stage 3 → Stage 4.",
+   "items": [
+    {
+     "name": "niche-sourcing-engine → niche-triage-gate",
+     "where": "chat",
+     "use": "Generate and score candidates."
+    },
+    {
+     "name": "market-intelligence → spin-analysis",
+     "where": "chat",
+     "use": "Stages 1 and 2 with live web research."
+    },
+    {
+     "name": "feasibility-study → venture-design",
+     "where": "chat",
+     "use": "Stages 3 and 4."
+    },
+    {
+     "name": "crucible-standard",
+     "where": "chat",
+     "use": "Red-team the plan before committing."
+    },
+    {
+     "name": "research-audit-verdict",
+     "where": "chat",
+     "use": "Check an outside research report."
+    },
+    {
+     "name": "Notion + notion-filer",
+     "where": "either",
+     "use": "File each stage to the right page."
+    },
+    {
+     "name": "Google Drive",
+     "where": "either",
+     "use": "Source documents."
+    }
+   ]
+  },
+  {
+   "id": "brand",
+   "name": "Brand kit / palette",
+   "why": "Per your standing rule, every new palette gets a Notion page, a Claude Design system and Brand Kit options.",
+   "steps": "Order: extend → analyze → build three kits → file → add to viewer.",
+   "items": [
+    {
+     "name": "palette-extender",
+     "where": "chat",
+     "use": "3 colors to a balanced 5."
+    },
+    {
+     "name": "palette-analysis",
+     "where": "chat",
+     "use": "Evaluate, document, post to Notion."
+    },
+    {
+     "name": "design-brand-kit-creation",
+     "where": "chat",
+     "use": "The three-output Full build."
+    },
+    {
+     "name": "luxury-brand-styling",
+     "where": "chat",
+     "use": "If the work is luxury-adjacent."
+    },
+    {
+     "name": "Canva / Magnific",
+     "where": "chat",
+     "use": "Swatches and sample imagery."
+    },
+    {
+     "name": "Brand Kit Viewer repo",
+     "where": "code",
+     "use": "Add the new kit to the viewer through GitHub and Netlify."
+    },
+    {
+     "name": "Notion",
+     "where": "either",
+     "use": "The palette library and kit pages."
+    }
+   ]
+  },
+  {
+   "id": "video",
+   "name": "Video & motion content",
+   "why": "Scripts and prompts in chat; anything that renders locally runs in Claude Code.",
+   "steps": "Order: concept → script → prompts or build → render → clip.",
+   "items": [
+    {
+     "name": "video-ad-director",
+     "where": "chat",
+     "use": "Concepts, script, storyboard, shot list."
+    },
+    {
+     "name": "video-prompt-engineer / seedance-prompt-engineer",
+     "where": "chat",
+     "use": "Generation-ready prompts."
+    },
+    {
+     "name": "HiggsField / Magnific",
+     "where": "chat",
+     "use": "Generate clips and images."
+    },
+    {
+     "name": "HyperFrames connector",
+     "where": "chat",
+     "use": "Hosted compose and render projects."
+    },
+    {
+     "name": "OpusClip",
+     "where": "chat",
+     "use": "Cut long video into short clips."
+    },
+    {
+     "name": "business-math-explainer",
+     "where": "code",
+     "use": "70-second explainer end to end."
+    },
+    {
+     "name": "dot-matrix-video / music-motion-video",
+     "where": "code",
+     "use": "Motion graphics builds."
+    },
+    {
+     "name": "Remotion plugin",
+     "where": "code",
+     "use": "Programmatic video in React."
+    },
+    {
+     "name": "Filesystem (project folder)",
+     "where": "code",
+     "use": "Read and write the project folder."
+    }
+   ]
+  },
+  {
+   "id": "books",
+   "name": "Book study",
+   "why": "Critical analysis and summaries in chat; the sites deploy through the Netlify connector from either side.",
+   "steps": "Order: critical analysis → summary assets → deck, briefing, infographic, mind map → wisdom database.",
+   "items": [
+    {
+     "name": "book-critical-analysis",
+     "where": "chat",
+     "use": "Run the book against the Framework."
+    },
+    {
+     "name": "learning-reference-guide",
+     "where": "chat",
+     "use": "Reference card from a transcript."
+    },
+    {
+     "name": "wisdom-db-sync",
+     "where": "chat",
+     "use": "Push quotes into the Notion database."
+    },
+    {
+     "name": "framework-mindmap",
+     "where": "chat",
+     "use": "Update the Framework map after a verdict."
+    },
+    {
+     "name": "book-summary-deck",
+     "where": "either",
+     "use": "40-slide deck."
+    },
+    {
+     "name": "book-executive-briefing-white-paper / book-gemini-summary-white-paper",
+     "where": "either",
+     "use": "Briefing sites on Netlify."
+    },
+    {
+     "name": "book-infographic-white-paper / book-mindmap-navy-signal",
+     "where": "either",
+     "use": "Infographic and interactive mind map."
+    },
+    {
+     "name": "Google Drive",
+     "where": "either",
+     "use": "The study folder."
+    }
+   ]
+  },
+  {
+   "id": "launch",
+   "name": "Launch & marketing",
+   "why": "Strategy and copy in chat; automation and posting hooks through connectors.",
+   "steps": "Order: context → strategy → copy → channels → measure.",
+   "items": [
+    {
+     "name": "product-marketing-context",
+     "where": "chat",
+     "use": "Run first so every other skill shares the positioning."
+    },
+    {
+     "name": "launch-strategy / pricing-strategy",
+     "where": "chat",
+     "use": "Plan the launch and the price."
+    },
+    {
+     "name": "copywriting / page-cro",
+     "where": "chat",
+     "use": "Page copy and conversion fixes."
+    },
+    {
+     "name": "email-sequence / social-content",
+     "where": "chat",
+     "use": "Flows and posts."
+    },
+    {
+     "name": "paid-ads / ad-creative",
+     "where": "chat",
+     "use": "Campaigns and variations."
+    },
+    {
+     "name": "Marketing plugin",
+     "where": "chat",
+     "use": "Campaign plan, SEO audit, performance report."
+    },
+    {
+     "name": "OpusClip",
+     "where": "either",
+     "use": "Clips and scheduled posts."
+    },
+    {
+     "name": "Make",
+     "where": "either",
+     "use": "Automate the repeating steps."
+    },
+    {
+     "name": "Gmail",
+     "where": "either",
+     "use": "Drafts. Reconnect it first."
+    }
+   ]
+  }
+ ]
+}

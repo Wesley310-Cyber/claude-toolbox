@@ -1,0 +1,3 @@
+{
+ "_help": "Your label corrections. Key = \"<groupId>::<item name>\". Value = {\"platform\":\"chat|code|both\",\"confirmed\":true}. A refresh never overwrites these."
+}

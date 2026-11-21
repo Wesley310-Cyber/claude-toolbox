@@ -1,0 +1,443 @@
+{
+ "source": "chat",
+ "scannedAt": "2026-11-21",
+ "note": "From ListSkills, ListPlugins and ListConnectors in a chat session. Gmail needs reconnecting.",
+ "items": [
+  {
+   "name": "8B Website Builder",
+   "type": "plugin"
+  },
+  {
+   "name": "AnimatedWebs",
+   "type": "plugin"
+  },
+  {
+   "name": "Context Optimizer (CCO)",
+   "type": "plugin"
+  },
+  {
+   "name": "Remotion",
+   "type": "plugin"
+  },
+  {
+   "name": "Notion plugin",
+   "type": "plugin"
+  },
+  {
+   "name": "Marketing plugin",
+   "type": "plugin"
+  },
+  {
+   "name": "Frontend Design",
+   "type": "plugin"
+  },
+  {
+   "name": "Playwright",
+   "type": "plugin"
+  },
+  {
+   "name": "21st.dev",
+   "type": "plugin"
+  },
+  {
+   "name": "copywriting",
+   "type": "skill"
+  },
+  {
+   "name": "prompt-master",
+   "type": "skill"
+  },
+  {
+   "name": "webgl-concept-report",
+   "type": "skill"
+  },
+  {
+   "name": "venture-design",
+   "type": "skill"
+  },
+  {
+   "name": "feasibility-study",
+   "type": "skill"
+  },
+  {
+   "name": "market-intelligence",
+   "type": "skill"
+  },
+  {
+   "name": "niche-sourcing-engine",
+   "type": "skill"
+  },
+  {
+   "name": "niche-triage-gate",
+   "type": "skill"
+  },
+  {
+   "name": "crucible-standard",
+   "type": "skill"
+  },
+  {
+   "name": "fitts-framework-governance",
+   "type": "skill"
+  },
+  {
+   "name": "framework-mindmap",
+   "type": "skill"
+  },
+  {
+   "name": "board-director-arnault",
+   "type": "skill"
+  },
+  {
+   "name": "business-math-explainer",
+   "type": "skill"
+  },
+  {
+   "name": "notion-filer",
+   "type": "skill"
+  },
+  {
+   "name": "book-critical-analysis",
+   "type": "skill"
+  },
+  {
+   "name": "book-executive-briefing-white-paper",
+   "type": "skill"
+  },
+  {
+   "name": "book-gemini-summary-white-paper",
+   "type": "skill"
+  },
+  {
+   "name": "book-infographic-white-paper",
+   "type": "skill"
+  },
+  {
+   "name": "book-mindmap-navy-signal",
+   "type": "skill"
+  },
+  {
+   "name": "book-summary-deck",
+   "type": "skill"
+  },
+  {
+   "name": "web-build-brief",
+   "type": "skill"
+  },
+  {
+   "name": "web-design-after-action-review",
+   "type": "skill"
+  },
+  {
+   "name": "motionsites-web-builder",
+   "type": "skill"
+  },
+  {
+   "name": "design-brand-kit-creation",
+   "type": "skill"
+  },
+  {
+   "name": "palette-analysis",
+   "type": "skill"
+  },
+  {
+   "name": "luxury-brand-styling",
+   "type": "skill"
+  },
+  {
+   "name": "video-ad-director",
+   "type": "skill"
+  },
+  {
+   "name": "video-prompt-engineer",
+   "type": "skill"
+  },
+  {
+   "name": "seedance-prompt-engineer",
+   "type": "skill"
+  },
+  {
+   "name": "dot-matrix-video",
+   "type": "skill"
+  },
+  {
+   "name": "music-motion-video",
+   "type": "skill"
+  },
+  {
+   "name": "paid-ads",
+   "type": "skill"
+  },
+  {
+   "name": "launch-strategy",
+   "type": "skill"
+  },
+  {
+   "name": "content-strategy",
+   "type": "skill"
+  },
+  {
+   "name": "page-cro",
+   "type": "skill"
+  },
+  {
+   "name": "pricing-strategy",
+   "type": "skill"
+  },
+  {
+   "name": "referral-program",
+   "type": "skill"
+  },
+  {
+   "name": "marketing-ideas",
+   "type": "skill"
+  },
+  {
+   "name": "marketing-psychology",
+   "type": "skill"
+  },
+  {
+   "name": "lead-magnets",
+   "type": "skill"
+  },
+  {
+   "name": "ad-creative",
+   "type": "skill"
+  },
+  {
+   "name": "research-audit-verdict",
+   "type": "skill"
+  },
+  {
+   "name": "learning-reference-guide",
+   "type": "skill"
+  },
+  {
+   "name": "wisdom-db-sync",
+   "type": "skill"
+  },
+  {
+   "name": "ai-weekly-intelligence-briefing",
+   "type": "skill"
+  },
+  {
+   "name": "poetic-voice-devotional",
+   "type": "skill"
+  },
+  {
+   "name": "palette-extender",
+   "type": "skill"
+  },
+  {
+   "name": "product-marketing-context",
+   "type": "skill"
+  },
+  {
+   "name": "email-sequence",
+   "type": "skill"
+  },
+  {
+   "name": "social-content",
+   "type": "skill"
+  },
+  {
+   "name": "spin-analysis",
+   "type": "skill"
+  },
+  {
+   "name": "docx",
+   "type": "skill"
+  },
+  {
+   "name": "pdf",
+   "type": "skill"
+  },
+  {
+   "name": "pptx",
+   "type": "skill"
+  },
+  {
+   "name": "xlsx",
+   "type": "skill"
+  },
+  {
+   "name": "docs",
+   "type": "skill"
+  },
+  {
+   "name": "deep-research",
+   "type": "skill"
+  },
+  {
+   "name": "skill-creator",
+   "type": "skill"
+  },
+  {
+   "name": "canvas-design",
+   "type": "skill"
+  },
+  {
+   "name": "theme-factory",
+   "type": "skill"
+  },
+  {
+   "name": "web-artifacts-builder",
+   "type": "skill"
+  },
+  {
+   "name": "mcp-builder",
+   "type": "skill"
+  },
+  {
+   "name": "morning",
+   "type": "skill"
+  },
+  {
+   "name": "import-memory",
+   "type": "skill"
+  },
+  {
+   "name": "google-workspace",
+   "type": "skill"
+  },
+  {
+   "name": "video-making",
+   "type": "skill"
+  },
+  {
+   "name": "chrome-browser",
+   "type": "skill"
+  },
+  {
+   "name": "computer-use",
+   "type": "skill"
+  },
+  {
+   "name": "built-in-browser",
+   "type": "skill"
+  },
+  {
+   "name": "dataviz",
+   "type": "skill"
+  },
+  {
+   "name": "artifact-design",
+   "type": "skill"
+  },
+  {
+   "name": "artifact-diagramming",
+   "type": "skill"
+  },
+  {
+   "name": "artifact-capabilities",
+   "type": "skill"
+  },
+  {
+   "name": "plugin-authoring",
+   "type": "skill"
+  },
+  {
+   "name": "file-reading",
+   "type": "skill"
+  },
+  {
+   "name": "pdf-reading",
+   "type": "skill"
+  },
+  {
+   "name": "product-self-knowledge",
+   "type": "skill"
+  },
+  {
+   "name": "explain-usage",
+   "type": "skill"
+  },
+  {
+   "name": "setup-claude",
+   "type": "skill"
+  },
+  {
+   "name": "cowork-plugin",
+   "type": "skill"
+  },
+  {
+   "name": "Gmail",
+   "type": "connector"
+  },
+  {
+   "name": "Google Calendar",
+   "type": "connector"
+  },
+  {
+   "name": "Google Drive",
+   "type": "connector"
+  },
+  {
+   "name": "Google Docs",
+   "type": "connector"
+  },
+  {
+   "name": "Google Sheets",
+   "type": "connector"
+  },
+  {
+   "name": "Google Slides",
+   "type": "connector"
+  },
+  {
+   "name": "Notion",
+   "type": "connector"
+  },
+  {
+   "name": "Canva",
+   "type": "connector"
+  },
+  {
+   "name": "Netlify",
+   "type": "connector"
+  },
+  {
+   "name": "Lucid",
+   "type": "connector"
+  },
+  {
+   "name": "Make",
+   "type": "connector"
+  },
+  {
+   "name": "HyperFrames by HeyGen",
+   "type": "connector"
+  },
+  {
+   "name": "Magnific",
+   "type": "connector"
+  },
+  {
+   "name": "HiggsField",
+   "type": "connector"
+  },
+  {
+   "name": "OpusClip",
+   "type": "connector"
+  },
+  {
+   "name": "AnimatedWebs MCP",
+   "type": "connector"
+  },
+  {
+   "name": "Zoom for Claude",
+   "type": "connector"
+  },
+  {
+   "name": "GoDaddy",
+   "type": "connector"
+  },
+  {
+   "name": "21st Dev",
+   "type": "connector"
+  },
+  {
+   "name": "Claude Docs",
+   "type": "connector"
+  }
+ ]
+}

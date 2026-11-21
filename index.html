@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Claude Ecosystem Toolbox</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: header → view toggle → [radial map | detail panel] or [project planner].
+   Pall Mall White Paper kit: white page, navy type, gold only as rules and fills. */
+:root{
+  --bg:#ffffff; --surface:#f5f6fa; --ink:#14213d; --muted:#586177; --rule:#d8dce6;
+  --navy:#14213d; --on-navy:#ffffff; --gold:#b8923a; --gold-soft:#f4ebd3; --gold-ink:#6b5016;
+  --dim:#c9cedb; --focus:#2b5fd9;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1626; --surface:#16213a; --ink:#eceff6; --muted:#9aa4ba; --rule:#2a3654;
+    --navy:#dfe5f3; --on-navy:#0e1626; --gold:#d4ae5c; --gold-soft:#2c2616; --gold-ink:#ecd49a;
+    --dim:#3a4666; --focus:#8fb0ff; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1626; --surface:#16213a; --ink:#eceff6; --muted:#9aa4ba; --rule:#2a3654;
+  --navy:#dfe5f3; --on-navy:#0e1626; --gold:#d4ae5c; --gold-soft:#2c2616; --gold-ink:#ecd49a;
+  --dim:#3a4666; --focus:#8fb0ff; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{color-scheme:light}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 var(--sans);
+  padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1240px;margin:0 auto}
+header{border-bottom:2px solid var(--gold);padding-bottom:16px;margin-bottom:18px}
+h1{font:600 clamp(30px,5vw,44px)/1.05 var(--serif);margin:0 0 6px;letter-spacing:.2px;text-wrap:balance}
+.sub{color:var(--muted);max-width:70ch;margin:0}
+.scan{margin-top:10px;font-size:12.5px;color:var(--muted)}
+.bar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin:0 0 16px}
+.seg{display:inline-flex;border:1px solid var(--navy);border-radius:8px;overflow:hidden}
+.seg button{font:500 14px var(--sans);padding:8px 16px;border:0;background:var(--bg);color:var(--ink);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--navy);color:var(--on-navy)}
+.seg button+button{border-left:1px solid var(--navy)}
+button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.filters .lab{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.chip{font:500 13px var(--sans);padding:6px 12px;border-radius:999px;border:1px solid var(--rule);background:var(--bg);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{border-color:var(--gold);background:var(--gold-soft);color:var(--ink);box-shadow:inset 0 0 0 1px var(--gold)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--muted);margin:0 0 14px}
+.legend span{display:inline-flex;gap:6px;align-items:center}
+.b{display:inline-flex;align-items:center;gap:6px;font:600 11px/1 var(--sans);padding:4px 9px;border-radius:999px;border:1px solid;white-space:nowrap;letter-spacing:.03em}
+.b-chat{background:var(--navy);color:var(--on-navy);border-color:var(--navy)}
+.b-code{background:var(--gold-soft);color:var(--gold-ink);border-color:var(--gold)}
+.b-both{background:var(--bg);color:var(--ink);border-color:var(--ink)}
+.b-both::before{content:"";width:9px;height:9px;border-radius:50%;background:linear-gradient(90deg,var(--navy) 50%,var(--gold) 50%);border:1px solid var(--ink)}
+.b-new{background:var(--gold);color:var(--on-navy);border-color:var(--gold);font-size:10px;padding:3px 7px;margin-left:4px}
+.b-unseen{background:var(--bg);color:var(--muted);border-color:var(--rule);font-size:10px;padding:3px 7px;margin-left:4px}
+.seen{color:var(--muted);font-size:12px;display:block;margin-top:2px}
+.err{border:1px solid var(--gold);background:var(--gold-soft);border-radius:8px;padding:14px 16px;max-width:70ch}
+.dot{width:8px;height:8px;border-radius:50%;display:inline-block}
+.dot.ok{background:var(--navy)} .dot.guess{border:1.5px solid var(--muted);background:transparent}
+
+.grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:20px;align-items:start}
+.mapbox{border:1px solid var(--rule);border-radius:10px;background:var(--surface);padding:6px;min-width:0}
+.mapbox svg{width:100%;height:auto;display:block}
+.nav{display:none;min-width:0}
+.panel{border:1px solid var(--rule);border-radius:10px;padding:18px;min-width:0;position:sticky;top:12px;max-height:calc(100vh - 24px);overflow:auto}
+.panel h2{font:600 28px/1.1 var(--serif);margin:0 0 4px}
+.panel .blurb{color:var(--muted);margin:0 0 12px;font-size:14px}
+.search{width:100%;font:400 14px var(--sans);padding:9px 12px;border:1px solid var(--rule);border-radius:8px;background:var(--bg);color:var(--ink);margin-bottom:12px}
+.items{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.items li{padding:11px 0;border-top:1px solid var(--rule);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px}
+.items li:first-child{border-top:2px solid var(--gold)}
+.items .n{font:600 14px var(--sans);overflow-wrap:anywhere;display:flex;gap:8px;align-items:center}
+.items .u{grid-column:1/-1;color:var(--muted);font-size:13.5px}
+.items .g{color:var(--muted);font-weight:400;font-size:12px}
+.empty{color:var(--muted);padding:14px 0}
+.navcat{font:600 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+.navbtns{display:flex;flex-wrap:wrap;gap:8px}
+.navbtns .chip[aria-pressed="true"]{background:var(--navy);color:var(--on-navy);border-color:var(--navy);box-shadow:none}
+
+svg .edge{stroke:var(--dim);stroke-width:1.4;fill:none}
+svg .core{fill:var(--navy)} svg .coretxt{fill:var(--on-navy);font:600 23px var(--serif);text-anchor:middle}
+svg .cat{fill:var(--bg);stroke:var(--navy);stroke-width:2}
+svg .cattxt{fill:var(--ink);font:600 18px var(--serif);text-anchor:middle}
+svg .pill{fill:var(--bg);stroke:var(--navy);stroke-width:1.3}
+svg .gnode{cursor:pointer}
+svg .gnode.sel .pill{stroke:var(--gold);stroke-width:3}
+svg .gnode.off{opacity:.28}
+svg .gtxt{fill:var(--ink);font:500 14px var(--sans);text-anchor:middle}
+svg .gcount{fill:var(--muted);font:400 11.5px var(--sans);text-anchor:middle}
+svg .s-chat{fill:var(--navy)} svg .s-code{fill:var(--gold)} svg .s-both{fill:var(--muted)}
+
+.over{margin-top:26px;border-top:2px solid var(--gold);padding-top:14px}
+.over h2{font:600 26px var(--serif);margin:0 0 4px}
+.over p.lead{color:var(--muted);margin:0 0 12px;max-width:75ch}
+.ovgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.ov{border:1px solid var(--rule);border-radius:8px;padding:12px 14px;min-width:0}
+.ov b{display:block;margin-bottom:2px}
+.ov span{color:var(--muted);font-size:13.5px}
+
+.pick{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.pick .chip{padding:8px 14px;font-size:14px}
+.pl h2{font:600 30px var(--serif);margin:0 0 2px}
+.pl .why{color:var(--muted);margin:0 0 14px;max-width:75ch}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.col{border:1px solid var(--rule);border-radius:10px;padding:14px 16px;min-width:0}
+.col h3{font:600 12px var(--sans);letter-spacing:.1em;text-transform:uppercase;margin:0 0 8px;color:var(--muted)}
+.col .items li:first-child{border-top-color:var(--gold)}
+.steps{margin:12px 0 0;color:var(--muted);font-size:13.5px}
+footer{margin-top:30px;color:var(--muted);font-size:12.5px;border-top:1px solid var(--rule);padding-top:12px;max-width:80ch}
+
+@media (max-width:900px){
+  .grid{grid-template-columns:minmax(0,1fr)}
+  .mapbox{display:none}
+  .nav{display:block}
+  .panel{position:static;max-height:none}
+}
+@media (prefers-reduced-motion:no-preference){ .chip,.seg button{transition:background .15s,border-color .15s} }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Claude Ecosystem Toolbox</h1>
+  <p class="sub">Every skill, plugin, connector and local tool on your account, sorted by where it works: Claude chat, Claude Code, or both. Use the map to see what you own, and the planner to see what a project needs.</p>
+  <p class="scan" id="scan">Loading toolbox…</p>
+</header>
+
+<div class="bar">
+  <div class="seg" role="group" aria-label="View">
+    <button id="v-map" aria-pressed="true" type="button">Map</button>
+    <button id="v-plan" aria-pressed="false" type="button">Project planner</button>
+  </div>
+  <div class="legend" aria-label="Legend">
+    <span><i class="b b-chat">Chat</i> works in Claude chat</span>
+    <span><i class="b b-code">Code</i> needs Claude Code / your Mac</span>
+    <span><i class="b b-both">Both</i> works in either</span>
+    <span><i class="dot ok"></i> confirmed</span>
+    <span><i class="dot guess"></i> best guess</span>
+  </div>
+</div>
+
+<section id="map-view">
+  <div class="filters" style="margin-bottom:12px" role="group" aria-label="Platform filter">
+    <span class="lab">Show</span>
+    <button class="chip" type="button" data-f="all" aria-pressed="true">Everything</button>
+    <button class="chip" type="button" data-f="chat" aria-pressed="false">Works in Chat</button>
+    <button class="chip" type="button" data-f="code" aria-pressed="false">Works in Code</button>
+    <button class="chip" type="button" data-f="both" aria-pressed="false">Works in both</button>
+  </div>
+  <div class="grid">
+    <div>
+      <div class="mapbox" id="mapbox"></div>
+      <div class="nav" id="nav"></div>
+    </div>
+    <aside class="panel" id="panel" aria-live="polite"></aside>
+  </div>
+
+  <div class="over">
+    <h2>Overlaps worth pruning</h2>
+    <p class="lead">These do the same job more than once. Keeping one primary per job makes it easier to know which tool to reach for.</p>
+    <div class="ovgrid">
+      <div class="ov"><b>Five website builders</b><span>hallmark (local), AnimatedWebs plugin, 8B Website Builder, motionsites-web-builder, frontend-design. Suggested split: web-build-brief for the brief, one of hallmark or AnimatedWebs to design, frontend-design to polish.</span></div>
+      <div class="ov"><b>Remotion installed twice</b><span>The Remotion plugin and the local remotion-best-practices skill come from the same source (remotion-dev/skills). One is enough.</span></div>
+      <div class="ov"><b>frontend-design appears three times</b><span>As a built-in skill, as a plugin, and as a plugin-prefixed skill. They behave the same.</span></div>
+      <div class="ov"><b>Marketing: plugin and your skills</b><span>The Marketing plugin's email-sequence and content skills overlap your own copywriting, email-sequence and social-content skills.</span></div>
+      <div class="ov"><b>Notion in three layers</b><span>Connector = access, Notion plugin = generic commands, notion-filer = your house rules. Use notion-filer for filing so titles and parents stay consistent.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="plan-view" hidden>
+  <div class="pick" id="pick" role="group" aria-label="Project type"></div>
+  <div class="pl" id="pl"></div>
+</section>
+
+<footer>
+  Confirmed means the platform is stated in the tool's own description, its files on your Mac, or its connection in this session. Best guess means it was inferred from what the tool does. Claude Code's main settings folder is protected from this session, so any plugin or skill that exists only there will not appear until it is added to your account or to ~/.agents. To refresh, run the scanner in Claude Code (see README.md); new tools appear here tagged NEW.
+</footer>
+</div>
+
+<script>
+/* ---------- data: loaded from toolbox.json + overrides.json ---------- */
+let GROUPS=[], PROJECTS=[], META={};
+const CATS={skills:'Skills',plugins:'Plugins',connectors:'Connectors',local:'On your Mac'};
+const LABEL={chat:'Chat',code:'Code',both:'Both'};
+// item array: [name, platform, use, confirmed(1|0), status]
+
+/* ---------- helpers ---------- */
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const $=id=>document.getElementById(id);
+let filter='all', sel='venture', query='', proj='site';
+const okFor=(p,f)=> f==='all' || (f==='chat'&&(p==='chat'||p==='both')) || (f==='code'&&(p==='code'||p==='both')) || (f==='both'&&p==='both');
+const badge=p=>'<span class="b b-'+p+'">'+LABEL[p]+'</span>';
+const conf=c=>'<i class="dot '+(c?'ok':'guess')+'" title="'+(c?'Confirmed':'Best guess')+'"></i>';
+const visItems=g=>g.items.filter(i=>okFor(i[1],filter));
+const counts=g=>{const o={chat:0,code:0,both:0};visItems(g).forEach(i=>o[i[1]]++);return o;};
+
+/* ---------- radial map ---------- */
+function layout(){
+  const order=['skills','plugins','connectors','local'], list=[];
+  order.forEach(c=>GROUPS.filter(g=>g.cat===c).forEach(g=>list.push(g)));
+  const n=list.length, cx=620, cy=400, rx=545, ry=330;
+  list.forEach((g,i)=>{const a=(-90+(i+.5)*360/n)*Math.PI/180;g.a=a;g.x=cx+rx*Math.cos(a);g.y=cy+ry*Math.sin(a);});
+  const cats=order.map(c=>{const gs=list.filter(g=>g.cat===c);const a=gs.reduce((s,g)=>s+g.a,0)/gs.length;
+    return {id:c,x:cx+205*Math.cos(a),y:cy+135*Math.sin(a)};});
+  return {list,cats,cx,cy};
+}
+let L;
+function lines(name){
+  if(name.length<=13) return [name];
+  const mid=name.length/2; let best=-1,d=1e9;
+  for(let i=0;i<name.length;i++){ if(name[i]===' '||name[i]==='&'&&false){const k=Math.abs(i-mid); if(k<d){d=k;best=i;}} }
+  if(best<0) return [name];
+  return [name.slice(0,best).trim(), name.slice(best).trim()];
+}
+function renderMap(){
+  let s='<svg viewBox="0 0 1240 810" role="img" aria-label="Radial map of your Claude ecosystem grouped by type">';
+  L.cats.forEach(c=>{s+='<line class="edge" x1="'+L.cx+'" y1="'+L.cy+'" x2="'+c.x+'" y2="'+c.y+'"/>';});
+  L.list.forEach(g=>{const c=L.cats.find(k=>k.id===g.cat);s+='<line class="edge" x1="'+c.x+'" y1="'+c.y+'" x2="'+g.x+'" y2="'+g.y+'"/>';});
+  s+='<circle class="core" cx="'+L.cx+'" cy="'+L.cy+'" r="70"/><text class="coretxt" x="'+L.cx+'" y="'+(L.cy-2)+'">Your</text><text class="coretxt" x="'+L.cx+'" y="'+(L.cy+20)+'">Toolbox</text>';
+  L.cats.forEach(c=>{s+='<ellipse class="cat" cx="'+c.x+'" cy="'+c.y+'" rx="66" ry="27"/><text class="cattxt" x="'+c.x+'" y="'+(c.y+6)+'">'+esc(CATS[c.id])+'</text>';});
+  L.list.forEach(g=>{
+    const cn=counts(g), tot=cn.chat+cn.code+cn.both, off=tot===0;
+    const ls=lines(g.name), w=118, h=54;
+    s+='<g class="gnode'+(g.id===sel?' sel':'')+(off?' off':'')+'" data-g="'+g.id+'" tabindex="0" role="button" aria-label="'+esc(g.name)+', '+tot+' items" transform="translate('+g.x.toFixed(1)+','+g.y.toFixed(1)+')">';
+    s+='<rect class="pill" x="'+(-w/2)+'" y="'+(-h/2)+'" width="'+w+'" height="'+h+'" rx="9"/>';
+    if(ls.length===1){s+='<text class="gtxt" y="-4">'+esc(ls[0])+'</text>';}
+    else{s+='<text class="gtxt" y="-9">'+esc(ls[0])+'</text><text class="gtxt" y="7">'+esc(ls[1])+'</text>';}
+    s+='<text class="gcount" y="'+(ls.length===1?12:17)+'" '+(ls.length===1?'':'style="display:none"')+'>'+tot+' items</text>';
+    if(tot>0){let x=-w/2+10;const bw=w-20;
+      [['chat','s-chat'],['code','s-code'],['both','s-both']].forEach(k=>{const ww=bw*cn[k[0]]/tot;if(ww>0){s+='<rect class="'+k[1]+'" x="'+x.toFixed(1)+'" y="'+(h/2-9)+'" width="'+ww.toFixed(1)+'" height="4" rx="2"/>';x+=ww;}});}
+    s+='</g>';
+  });
+  s+='</svg>';
+  $('mapbox').innerHTML=s;
+}
+function renderNav(){
+  let s='';
+  ['skills','plugins','connectors','local'].forEach(c=>{
+    s+='<div class="navcat">'+esc(CATS[c])+'</div><div class="navbtns">';
+    GROUPS.filter(g=>g.cat===c).forEach(g=>{
+      const t=visItems(g).length;
+      s+='<button type="button" class="chip" data-g="'+g.id+'" aria-pressed="'+(g.id===sel)+'"'+(t===0?' style="opacity:.4"':'')+'>'+esc(g.name)+' · '+t+'</button>';
+    });
+    s+='</div>';
+  });
+  $('nav').innerHTML=s;
+}
+const SIDE={chat:'Chat',code:'Code'};
+function seenNote(i){
+  const b=i[5]; if(!b||!b.length) return '';
+  const where=b.map(x=>SIDE[x]).join(' + ');
+  let t='Seen in: '+where;
+  if(b.length===2&&i[1]!=='both') t+=' · installed in both, works best in '+LABEL[i[1]];
+  return '<span class="seen">'+esc(t)+'</span>';
+}
+function itemLi(i,gname){
+  return '<li><span class="n">'+conf(i[3])+'<span>'+esc(i[0])+(i[4]==='new'?' <span class="b b-new">NEW</span>':'')+(i[4]==='unseen'?' <span class="b b-unseen">not seen</span>':'')+(gname?' <span class="g">'+esc(gname)+'</span>':'')+'</span></span>'+badge(i[1])+'<span class="u">'+esc(i[2])+seenNote(i)+'</span></li>';
+}
+function renderPanel(){
+  const q=query.trim().toLowerCase();
+  let h='<input id="q" class="search" type="search" placeholder="Search every tool by name or use" aria-label="Search tools" value="'+esc(query)+'">';
+  if(q){
+    const hits=[];
+    GROUPS.forEach(g=>visItems(g).forEach(i=>{if((i[0]+' '+i[2]+' '+g.name).toLowerCase().includes(q))hits.push([i,g.name]);}));
+    h+='<h2>Search</h2><p class="blurb">'+hits.length+' match'+(hits.length===1?'':'es')+' for “'+esc(query.trim())+'”.</p>';
+    h+=hits.length?'<ul class="items">'+hits.map(x=>itemLi(x[0],x[1])).join('')+'</ul>':'<div class="empty">Nothing matches. Try a shorter word.</div>';
+  }else{
+    const g=GROUPS.find(x=>x.id===sel)||GROUPS[0], its=visItems(g);
+    h+='<h2>'+esc(g.name)+'</h2><p class="blurb">'+esc(CATS[g.cat])+' · '+esc(g.blurb)+(g.seenBy?' <span class="seen">Plugin seen in: '+esc(g.seenBy.map(x=>SIDE[x]).join(' + '))+'</span>':'')+'</p>';
+    h+=its.length?'<ul class="items">'+its.map(i=>itemLi(i)).join('')+'</ul>':'<div class="empty">Nothing in this group works in that mode. Switch the filter to Everything.</div>';
+  }
+  const keep=document.activeElement&&document.activeElement.id==='q';
+  $('panel').innerHTML=h;
+  const q2=$('q'); q2.addEventListener('input',e=>{query=e.target.value;renderPanel();});
+  if(keep){q2.focus();q2.setSelectionRange(q2.value.length,q2.value.length);}
+}
+function renderAll(){
+  renderMap();renderNav();renderPanel();
+  document.querySelectorAll('[data-f]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===filter));
+}
+
+/* ---------- planner ---------- */
+function renderPlanner(){
+  $('pick').innerHTML=PROJECTS.map(p=>'<button type="button" class="chip" data-p="'+p.id+'" aria-pressed="'+(p.id===proj)+'">'+esc(p.name)+'</button>').join('');
+  const p=PROJECTS.find(x=>x.id===proj)||PROJECTS[0];
+  const col=(w,title)=>{const its=p.items.filter(i=>i[1]===w);if(!its.length)return'';
+    return '<div class="col"><h3>'+title+'</h3><ul class="items">'+its.map(i=>'<li><span class="n"><span>'+esc(i[0])+'</span></span>'+badge(w==='either'?'both':w)+'<span class="u">'+esc(i[2])+'</span></li>').join('')+'</ul></div>';};
+  $('pl').innerHTML='<h2>'+esc(p.name)+'</h2><p class="why">'+esc(p.why)+'</p><div class="cols">'+
+    col('chat','Plan and create in Chat')+col('code','Build and test in Claude Code')+col('either','Works in either')+'</div><p class="steps">'+esc(p.steps)+'</p>';
+}
+
+/* ---------- events & routing ---------- */
+document.addEventListener('click',e=>{
+  const g=e.target.closest('[data-g]'); if(g){sel=g.dataset.g;query='';renderAll();return;}
+  const f=e.target.closest('[data-f]'); if(f){filter=f.dataset.f;renderAll();return;}
+  const p=e.target.closest('[data-p]'); if(p){proj=p.dataset.p;renderPlanner();return;}
+});
+document.addEventListener('keydown',e=>{
+  if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('g[data-g]')){e.preventDefault();sel=e.target.dataset.g;query='';renderAll();}
+});
+function setView(v){
+  const plan=v==='planner';
+  $('map-view').hidden=plan;$('plan-view').hidden=!plan;
+  $('v-map').setAttribute('aria-pressed',!plan);$('v-plan').setAttribute('aria-pressed',plan);
+}
+$('v-map').onclick=()=>{location.hash='map';};
+$('v-plan').onclick=()=>{location.hash='planner';};
+window.addEventListener('hashchange',()=>setView(location.hash==='#planner'?'planner':'map'));
+
+async function boot(){
+  try{
+    const [t,o]=await Promise.all([fetch('toolbox.json').then(r=>{if(!r.ok)throw new Error('toolbox.json '+r.status);return r.json();}),
+                                   fetch('overrides.json').then(r=>r.ok?r.json():{}).catch(()=>({}))]);
+    META=t;
+    GROUPS=t.groups.map(g=>({id:g.id,cat:g.cat,name:g.name,blurb:g.blurb,seenBy:g.seenBy||null,items:g.items.map(i=>{
+      const ov=o[g.id+'::'+i.name]||{};
+      return [i.name, ov.platform||i.platform, i.use, (ov.confirmed!==undefined?ov.confirmed:i.confirmed)?1:0, i.status||'active', i.seenBy||null];})}));
+    PROJECTS=t.projects.map(p=>({id:p.id,name:p.name,why:p.why,steps:p.steps,items:p.items.map(i=>[i.name,i.where,i.use])}));
+    if(!GROUPS.some(g=>g.id===sel)) sel=GROUPS[0].id;
+    if(!PROJECTS.some(p=>p.id===proj)) proj=PROJECTS[0].id;
+    L=layout();
+    const n=GROUPS.reduce((s,g)=>s+g.items.length,0), nw=GROUPS.reduce((s,g)=>s+g.items.filter(i=>i[4]==='new').length,0);
+    $('scan').textContent='Last scanned '+t.scanned+' · '+n+' tools in '+GROUPS.length+' groups'+(nw?' · '+nw+' new since the last scan':'')+(t.sources&&t.sources.code?'':' · Claude Code side not scanned yet');
+    renderAll();renderPlanner();
+  }catch(e){
+    $('scan').textContent='';
+    $('mapbox').innerHTML='<div class="err">Could not load toolbox.json ('+esc(e.message)+'). Open this page from a web server, not as a file: run <b>npx serve</b> in this folder, or deploy it.</div>';
+  }
+}
+setView(location.hash==='#planner'?'planner':'map');
+boot();
+</script>
+</body>
+</html>
