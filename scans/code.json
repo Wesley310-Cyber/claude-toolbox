@@ -1,616 +1,869 @@
 {
  "source": "code",
  "scannedAt": "2026-11-21",
- "note": "From the Claude Code session answer. Provenance (~/.claude vs ~/.agents vs account) was not visible.",
+ "note": "Real read-only scan: installed_plugins.json, ~/.claude/skills, ~/.agents/skills + lock, ListPlugins, ListSkills, session connector status.",
  "items": [
   {
-   "name": "animatedwebs",
+   "name": "frontend-design",
    "type": "plugin",
-   "use": "Animated sites, heroes, backgrounds, gradients, components."
-  },
-  {
-   "name": "Notion",
-   "type": "plugin",
-   "use": "Notion pages, tasks, rows and search."
-  },
-  {
-   "name": "marketing",
-   "type": "plugin",
-   "use": "Campaigns, SEO, content, email, reports. Bundles MCPs awaiting sign-in."
-  },
-  {
-   "name": "remotion",
-   "type": "plugin",
-   "use": "Remotion video creation."
-  },
-  {
-   "name": "hyperframes",
-   "type": "plugin",
-   "use": "HTML-to-video authoring, CLI, registry and media tools (8 skills). Local HyperFrames route for Claude Code."
-  },
-  {
-   "name": "claude-context-optimizer",
-   "type": "plugin",
-   "use": "cco-* token and context tools."
-  },
-  {
-   "name": "8b-ai-website-builder",
-   "type": "plugin",
-   "use": "The site skill; MCP server still connecting."
+   "use": "Frontend design skill for UI/UX work.",
+   "evidence": "listed in ~/.claude/plugins/installed_plugins.json and enabledPlugins"
   },
   {
    "name": "playwright",
    "type": "plugin",
-   "use": "Browser automation via MCP; still connecting."
+   "use": "Browser automation and testing via MCP.",
+   "evidence": "listed in ~/.claude/plugins/installed_plugins.json and enabledPlugins"
   },
   {
    "name": "context7",
    "type": "plugin",
-   "use": "Library documentation lookup via MCP; awaiting sign-in."
+   "use": "Library documentation lookup via MCP (needs sign-in).",
+   "evidence": "listed in ~/.claude/plugins/installed_plugins.json and enabledPlugins"
   },
   {
-   "name": "anthropic-skills",
+   "name": "hyperframes",
    "type": "plugin",
-   "use": "Bundle: docx, pdf, pptx, xlsx, docs, deep-research, skill-creator and more."
+   "use": "HTML-to-video authoring, CLI, registry and media skills.",
+   "evidence": "listed in ~/.claude/plugins/installed_plugins.json and enabledPlugins"
   },
   {
-   "name": "frontend-design",
+   "name": "animatedwebs",
    "type": "plugin",
-   "use": "Frontend design skill."
+   "use": "Animated sites, heroes, backgrounds, gradients, components (15-tool MCP).",
+   "evidence": "listed by ListPlugins as enabled on claude.ai account (name matched by description)"
+  },
+  {
+   "name": "Notion",
+   "type": "plugin",
+   "use": "Notion skills plus Notion MCP.",
+   "evidence": "listed by ListPlugins as enabled on claude.ai account (name matched by description)"
+  },
+  {
+   "name": "marketing",
+   "type": "plugin",
+   "use": "Campaigns, content, brand voice, performance reports; bundles MCPs.",
+   "evidence": "listed by ListPlugins as enabled on claude.ai account (name matched by description)"
+  },
+  {
+   "name": "remotion",
+   "type": "plugin",
+   "use": "Remotion video creation skills.",
+   "evidence": "listed by ListPlugins as enabled on claude.ai account (name matched by description)"
+  },
+  {
+   "name": "claude-context-optimizer",
+   "type": "plugin",
+   "use": "cco-* context and cost tools.",
+   "evidence": "listed by ListPlugins as enabled on claude.ai account (name matched by description)"
   },
   {
    "name": "21st",
    "type": "plugin",
-   "use": "21st.dev UI skill."
+   "use": "21st.dev UI components and themes.",
+   "evidence": "listed by ListPlugins as enabled on claude.ai account (name matched by description)"
+  },
+  {
+   "name": "8b-ai-website-builder",
+   "type": "plugin",
+   "use": "8B site builder; MCP server connected, skill \"site\".",
+   "evidence": "session shows plugin:8b-ai-website-builder:8b connected (not found on disk or in account list)"
   },
   {
    "name": "find-skills",
-   "type": "local-skill"
+   "type": "local-skill",
+   "use": "Discover and install agent skills.",
+   "platform": "code",
+   "evidence": "folder in ~/.claude/skills and ~/.agents/skills; ~/.agents/.skill-lock.json lists its GitHub source"
   },
   {
    "name": "hallmark",
-   "type": "local-skill"
+   "type": "local-skill",
+   "use": "Design skill for distinctive new websites.",
+   "platform": "code",
+   "evidence": "folder in ~/.claude/skills and ~/.agents/skills; ~/.agents/.skill-lock.json lists its GitHub source"
   },
   {
    "name": "remotion-best-practices",
-   "type": "local-skill"
+   "type": "local-skill",
+   "use": "Router for Remotion skills.",
+   "platform": "code",
+   "evidence": "folder in ~/.claude/skills and ~/.agents/skills; ~/.agents/.skill-lock.json lists its GitHub source"
   },
   {
-   "name": "webapp-testing",
-   "type": "skill"
-  },
-  {
-   "name": "copywriting",
-   "type": "skill"
-  },
-  {
-   "name": "prompt-master",
-   "type": "skill"
-  },
-  {
-   "name": "webgl-concept-report",
-   "type": "skill"
-  },
-  {
-   "name": "venture-design",
-   "type": "skill"
-  },
-  {
-   "name": "feasibility-study",
-   "type": "skill"
-  },
-  {
-   "name": "market-intelligence",
-   "type": "skill"
-  },
-  {
-   "name": "niche-sourcing-engine",
-   "type": "skill"
-  },
-  {
-   "name": "niche-triage-gate",
-   "type": "skill"
-  },
-  {
-   "name": "crucible-standard",
-   "type": "skill"
-  },
-  {
-   "name": "fitts-framework-governance",
-   "type": "skill"
-  },
-  {
-   "name": "framework-mindmap",
-   "type": "skill"
-  },
-  {
-   "name": "board-director-arnault",
-   "type": "skill"
+   "name": "toolbox-scan-chat",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
    "name": "business-math-explainer",
-   "type": "skill"
-  },
-  {
-   "name": "notion-filer",
-   "type": "skill"
-  },
-  {
-   "name": "book-critical-analysis",
-   "type": "skill"
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
    "name": "book-executive-briefing-white-paper",
-   "type": "skill"
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
    "name": "book-gemini-summary-white-paper",
-   "type": "skill"
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
    "name": "book-infographic-white-paper",
-   "type": "skill"
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
    "name": "book-mindmap-navy-signal",
-   "type": "skill"
-  },
-  {
-   "name": "book-summary-deck",
-   "type": "skill"
-  },
-  {
-   "name": "web-build-brief",
-   "type": "skill"
-  },
-  {
-   "name": "web-design-after-action-review",
-   "type": "skill"
-  },
-  {
-   "name": "motionsites-web-builder",
-   "type": "skill"
-  },
-  {
-   "name": "design-brand-kit-creation",
-   "type": "skill"
-  },
-  {
-   "name": "palette-analysis",
-   "type": "skill"
-  },
-  {
-   "name": "luxury-brand-styling",
-   "type": "skill"
-  },
-  {
-   "name": "video-ad-director",
-   "type": "skill"
-  },
-  {
-   "name": "video-prompt-engineer",
-   "type": "skill"
-  },
-  {
-   "name": "seedance-prompt-engineer",
-   "type": "skill"
-  },
-  {
-   "name": "dot-matrix-video",
-   "type": "skill"
-  },
-  {
-   "name": "music-motion-video",
-   "type": "skill"
-  },
-  {
-   "name": "paid-ads",
-   "type": "skill"
-  },
-  {
-   "name": "launch-strategy",
-   "type": "skill"
-  },
-  {
-   "name": "content-strategy",
-   "type": "skill"
-  },
-  {
-   "name": "page-cro",
-   "type": "skill"
-  },
-  {
-   "name": "pricing-strategy",
-   "type": "skill"
-  },
-  {
-   "name": "referral-program",
-   "type": "skill"
-  },
-  {
-   "name": "marketing-ideas",
-   "type": "skill"
-  },
-  {
-   "name": "marketing-psychology",
-   "type": "skill"
-  },
-  {
-   "name": "lead-magnets",
-   "type": "skill"
-  },
-  {
-   "name": "ad-creative",
-   "type": "skill"
-  },
-  {
-   "name": "research-audit-verdict",
-   "type": "skill"
-  },
-  {
-   "name": "learning-reference-guide",
-   "type": "skill"
-  },
-  {
-   "name": "wisdom-db-sync",
-   "type": "skill"
-  },
-  {
-   "name": "ai-weekly-intelligence-briefing",
-   "type": "skill"
-  },
-  {
-   "name": "poetic-voice-devotional",
-   "type": "skill"
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
    "name": "palette-extender",
-   "type": "skill"
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
-   "name": "product-marketing-context",
-   "type": "skill"
+   "name": "web-design-after-action-review",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
-   "name": "email-sequence",
-   "type": "skill"
+   "name": "board-director-arnault",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
-   "name": "social-content",
-   "type": "skill"
+   "name": "music-motion-video",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "dot-matrix-video",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "notion-filer",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "research-audit-verdict",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "web-build-brief",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "book-summary-deck",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "motionsites-web-builder",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "design-brand-kit-creation",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "video-prompt-engineer",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "poetic-voice-devotional",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "prompt-master",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "framework-mindmap",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "wisdom-db-sync",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "book-critical-analysis",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "niche-triage-gate",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "niche-sourcing-engine",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "venture-design",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
    "name": "spin-analysis",
-   "type": "skill"
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
-   "name": "docx",
-   "type": "skill"
+   "name": "feasibility-study",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
-   "name": "pdf",
-   "type": "skill"
+   "name": "seedance-prompt-engineer",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
-   "name": "pptx",
-   "type": "skill"
+   "name": "video-ad-director",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
-   "name": "xlsx",
-   "type": "skill"
+   "name": "fitts-framework-governance",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "crucible-standard",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "webgl-concept-report",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "market-intelligence",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "luxury-brand-styling",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "learning-reference-guide",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "palette-analysis",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "referral-program",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "pricing-strategy",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "content-strategy",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "social-content",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "paid-ads",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "page-cro",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "email-sequence",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "copywriting",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "product-marketing-context",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "ad-creative",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "launch-strategy",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "lead-magnets",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "marketing-ideas",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "marketing-psychology",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "ai-weekly-intelligence-briefing",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
    "name": "docs",
-   "type": "skill"
-  },
-  {
-   "name": "deep-research",
-   "type": "skill"
-  },
-  {
-   "name": "skill-creator",
-   "type": "skill"
-  },
-  {
-   "name": "canvas-design",
-   "type": "skill"
-  },
-  {
-   "name": "theme-factory",
-   "type": "skill"
-  },
-  {
-   "name": "web-artifacts-builder",
-   "type": "skill"
-  },
-  {
-   "name": "mcp-builder",
-   "type": "skill"
-  },
-  {
-   "name": "morning",
-   "type": "skill"
-  },
-  {
-   "name": "import-memory",
-   "type": "skill"
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
    "name": "google-workspace",
-   "type": "skill"
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
-   "name": "video-making",
-   "type": "skill"
+   "name": "computer-use",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "chrome-browser",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "built-in-browser",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "deep-research",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "import-memory",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "morning",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "web-artifacts-builder",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "skill-creator",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "theme-factory",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "mcp-builder",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "canvas-design",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "xlsx",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "pptx",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "pdf",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
+  },
+  {
+   "name": "docx",
+   "type": "skill",
+   "use": "Account skill (see description in claude.ai).",
+   "evidence": "listed by ListSkills as enabled claude.ai skill"
   },
   {
    "name": "update-config",
    "type": "skill",
-   "use": "Claude Code built-in. Edit Claude Code settings.",
+   "use": "Built-in Claude Code skill.",
    "platform": "code",
-   "evidence": "Listed as a harness built-in by the Claude Code session"
+   "evidence": "in the Claude Code harness skill list"
   },
   {
    "name": "keybindings-help",
    "type": "skill",
-   "use": "Claude Code built-in. Keyboard shortcut help.",
+   "use": "Built-in Claude Code skill.",
    "platform": "code",
-   "evidence": "Listed as a harness built-in by the Claude Code session"
+   "evidence": "in the Claude Code harness skill list"
   },
   {
    "name": "code-review",
    "type": "skill",
-   "use": "Claude Code built-in. Review code changes.",
+   "use": "Built-in Claude Code skill.",
    "platform": "code",
-   "evidence": "Listed as a harness built-in by the Claude Code session"
+   "evidence": "in the Claude Code harness skill list"
   },
   {
    "name": "simplify",
    "type": "skill",
-   "use": "Claude Code built-in. Simplify changed code.",
+   "use": "Built-in Claude Code skill.",
    "platform": "code",
-   "evidence": "Listed as a harness built-in by the Claude Code session"
+   "evidence": "in the Claude Code harness skill list"
   },
   {
    "name": "fewer-permission-prompts",
    "type": "skill",
-   "use": "Claude Code built-in. Reduce permission prompts.",
+   "use": "Built-in Claude Code skill.",
    "platform": "code",
-   "evidence": "Listed as a harness built-in by the Claude Code session"
+   "evidence": "in the Claude Code harness skill list"
   },
   {
    "name": "loop",
    "type": "skill",
-   "use": "Claude Code built-in. Run a prompt on a recurring interval.",
+   "use": "Built-in Claude Code skill.",
    "platform": "code",
-   "evidence": "Listed as a harness built-in by the Claude Code session"
+   "evidence": "in the Claude Code harness skill list"
   },
   {
    "name": "schedule",
    "type": "skill",
-   "use": "Claude Code built-in. Scheduled tasks.",
+   "use": "Built-in Claude Code skill.",
    "platform": "code",
-   "evidence": "Listed as a harness built-in by the Claude Code session"
+   "evidence": "in the Claude Code harness skill list"
   },
   {
    "name": "claude-api",
    "type": "skill",
-   "use": "Claude Code built-in. Build with the Claude API.",
+   "use": "Built-in Claude Code skill.",
    "platform": "code",
-   "evidence": "Listed as a harness built-in by the Claude Code session"
+   "evidence": "in the Claude Code harness skill list"
   },
   {
    "name": "run",
    "type": "skill",
-   "use": "Claude Code built-in. Run the project.",
+   "use": "Built-in Claude Code skill.",
    "platform": "code",
-   "evidence": "Listed as a harness built-in by the Claude Code session"
+   "evidence": "in the Claude Code harness skill list"
   },
   {
    "name": "init",
    "type": "skill",
-   "use": "Claude Code built-in. Create a CLAUDE.md for a repo.",
+   "use": "Built-in Claude Code skill.",
    "platform": "code",
-   "evidence": "Listed as a harness built-in by the Claude Code session"
+   "evidence": "in the Claude Code harness skill list"
   },
   {
    "name": "security-review",
    "type": "skill",
-   "use": "Claude Code built-in. Security review of pending changes.",
+   "use": "Built-in Claude Code skill.",
    "platform": "code",
-   "evidence": "Listed as a harness built-in by the Claude Code session"
+   "evidence": "in the Claude Code harness skill list"
+  },
+  {
+   "name": "webapp-testing",
+   "type": "skill",
+   "use": "Skill in this Code session list (source folder not visible)."
   },
   {
    "name": "dataviz",
    "type": "skill",
-   "use": "Built-in guidance skill."
+   "use": "Skill in this Code session list (source folder not visible)."
   },
   {
    "name": "artifact-design",
    "type": "skill",
-   "use": "Built-in guidance skill."
+   "use": "Skill in this Code session list (source folder not visible)."
   },
   {
    "name": "artifact-diagramming",
    "type": "skill",
-   "use": "Built-in guidance skill."
+   "use": "Skill in this Code session list (source folder not visible)."
   },
   {
    "name": "artifact-capabilities",
    "type": "skill",
-   "use": "Built-in guidance skill."
+   "use": "Skill in this Code session list (source folder not visible)."
   },
   {
    "name": "plugin-authoring",
    "type": "skill",
-   "use": "Built-in guidance skill."
+   "use": "Skill in this Code session list (source folder not visible)."
   },
   {
-   "name": "Gmail",
-   "type": "connector"
-  },
-  {
-   "name": "Google Calendar",
-   "type": "connector"
-  },
-  {
-   "name": "Google Drive",
-   "type": "connector"
-  },
-  {
-   "name": "Google Docs",
-   "type": "connector"
-  },
-  {
-   "name": "Google Sheets",
-   "type": "connector"
-  },
-  {
-   "name": "Google Slides",
-   "type": "connector"
-  },
-  {
-   "name": "Notion",
-   "type": "connector"
-  },
-  {
-   "name": "Canva",
-   "type": "connector"
-  },
-  {
-   "name": "Netlify",
-   "type": "connector"
+   "name": "HiggsField Connector",
+   "type": "connector",
+   "use": "Image/video generation.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
   },
   {
    "name": "Lucid",
-   "type": "connector"
-  },
-  {
-   "name": "Make",
-   "type": "connector"
-  },
-  {
-   "name": "HyperFrames by HeyGen",
-   "type": "connector"
-  },
-  {
-   "name": "Magnific",
-   "type": "connector"
-  },
-  {
-   "name": "HiggsField",
-   "type": "connector"
-  },
-  {
-   "name": "OpusClip",
-   "type": "connector"
-  },
-  {
-   "name": "AnimatedWebs MCP",
-   "type": "connector"
-  },
-  {
-   "name": "Zoom for Claude",
-   "type": "connector"
-  },
-  {
-   "name": "GoDaddy",
-   "type": "connector"
-  },
-  {
-   "name": "21st Dev",
-   "type": "connector"
+   "type": "connector",
+   "use": "Diagrams.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
   },
   {
    "name": "Claude Docs",
    "type": "connector",
-   "use": "Create and edit living docs in Claude."
+   "use": "Editable docs.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "Make",
+   "type": "connector",
+   "use": "Automation scenarios.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "Google Slides",
+   "type": "connector",
+   "use": "Slides.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "GoDaddy",
+   "type": "connector",
+   "use": "Domain search.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "Magnific",
+   "type": "connector",
+   "use": "Image/video/3D generation.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "Notion",
+   "type": "connector",
+   "use": "Notion workspace.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "Google Calendar",
+   "type": "connector",
+   "use": "Calendar.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "Google Sheets",
+   "type": "connector",
+   "use": "Sheets.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "Google Docs",
+   "type": "connector",
+   "use": "Docs.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "Google Drive",
+   "type": "connector",
+   "use": "Drive files.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "HyperFrames by HeyGen",
+   "type": "connector",
+   "use": "Hosted HTML video projects.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "Gmail",
+   "type": "connector",
+   "use": "Email.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "AnimatedWebs MCP",
+   "type": "connector",
+   "use": "AnimatedWebs catalog.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "21st Dev",
+   "type": "connector",
+   "use": "UI components.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "OpusClip",
+   "type": "connector",
+   "use": "Video clipping.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "Zoom for Claude",
+   "type": "connector",
+   "use": "Meetings and recordings.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "Canva",
+   "type": "connector",
+   "use": "Designs.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "Netlify",
+   "type": "connector",
+   "use": "Deploys.",
+   "platform": "both",
+   "evidence": "kind=connector with account id in session_connectors_status, status connected; callable in this Code session"
+  },
+  {
+   "name": "Gamma",
+   "type": "connector",
+   "use": "Account connector awaiting sign-in.",
+   "evidence": "named \"claude.ai Gamma\" in ~/.claude/mcp-needs-auth-cache.json; not in this session"
   },
   {
    "name": "Skillry",
-   "type": "mcp"
+   "type": "mcp",
+   "use": "Skill catalog search and install.",
+   "evidence": "tools present in this session (kind desktop)"
   },
   {
    "name": "Control Chrome",
-   "type": "mcp"
-  },
-  {
-   "name": "claude-in-chrome",
-   "type": "mcp"
-  },
-  {
-   "name": "Claude_Browser",
-   "type": "mcp"
-  },
-  {
-   "name": "mcp-registry",
    "type": "mcp",
-   "use": "Search and suggest connectors."
+   "use": "Control Chrome tabs.",
+   "evidence": "tools present in this session (kind desktop)"
+  },
+  {
+   "name": "easel",
+   "type": "mcp",
+   "use": "Chart tool from the cc-plugin-easel plugin.",
+   "evidence": "tools present in this session (kind other)"
   },
   {
    "name": "scheduled-tasks",
    "type": "mcp",
-   "use": "Create and manage scheduled tasks."
+   "use": "Scheduled tasks.",
+   "evidence": "tools present in this session (kind other)"
+  },
+  {
+   "name": "claude-in-chrome",
+   "type": "mcp",
+   "use": "Claude in Chrome browser tools.",
+   "evidence": "tools present in this session (kind local)"
+  },
+  {
+   "name": "Claude_Browser",
+   "type": "mcp",
+   "use": "Built-in browser pane.",
+   "evidence": "tools present in this session (kind local)"
+  },
+  {
+   "name": "mcp-registry",
+   "type": "mcp",
+   "use": "Search the MCP registry.",
+   "evidence": "tools present in this session (kind local)"
   },
   {
    "name": "terminal",
    "type": "mcp",
-   "use": "Terminal access in the desktop app."
+   "use": "Terminal panel tools.",
+   "evidence": "tools present in this session (kind local)"
   },
   {
    "name": "visualize",
    "type": "mcp",
-   "use": "Inline visuals and widgets."
+   "use": "Inline visuals.",
+   "evidence": "tools present in this session (kind local)"
   },
   {
    "name": "iOS Simulator",
    "type": "mcp",
-   "use": "Drive the iOS Simulator."
-  },
-  {
-   "name": "Claude desktop app servers (ccd_*)",
-   "type": "mcp",
-   "use": "Session, sidebar, settings, PR and window controls. Internal to the app."
+   "use": "iOS Simulator control.",
+   "evidence": "tools present in this session (kind local)"
   },
   {
    "name": "Ahrefs",
    "type": "mcp",
-   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+   "use": "Marketing-plugin MCP, needs sign-in.",
+   "evidence": "plugin:marketing:ahrefs status needs_auth"
   },
   {
    "name": "Amplitude",
    "type": "mcp",
-   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+   "use": "Marketing-plugin MCP, needs sign-in.",
+   "evidence": "plugin:marketing:amplitude status needs_auth"
   },
   {
    "name": "Figma",
    "type": "mcp",
-   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+   "use": "Marketing-plugin MCP, needs sign-in.",
+   "evidence": "plugin:marketing:figma status needs_auth"
   },
   {
    "name": "HubSpot",
    "type": "mcp",
-   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+   "use": "Marketing-plugin MCP, needs sign-in.",
+   "evidence": "plugin:marketing:hubspot status needs_auth"
   },
   {
    "name": "Klaviyo",
    "type": "mcp",
-   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+   "use": "Marketing-plugin MCP, needs sign-in.",
+   "evidence": "plugin:marketing:klaviyo status needs_auth"
   },
   {
    "name": "Similarweb",
    "type": "mcp",
-   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+   "use": "Marketing-plugin MCP, needs sign-in.",
+   "evidence": "plugin:marketing:similarweb status needs_auth"
   },
   {
    "name": "Slack",
    "type": "mcp",
-   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+   "use": "Marketing-plugin MCP, needs sign-in.",
+   "evidence": "plugin:marketing:slack status needs_auth"
   },
   {
    "name": "Supermetrics",
    "type": "mcp",
-   "use": "Bundled with the Marketing plugin. Needs sign-in before use."
+   "use": "Marketing-plugin MCP, needs sign-in.",
+   "evidence": "plugin:marketing:supermetrics status needs_auth"
   }
  ]
 }

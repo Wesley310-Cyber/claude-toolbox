@@ -730,6 +730,17 @@
       "code",
       "chat"
      ]
+    },
+    {
+     "name": "toolbox-scan-chat",
+     "platform": "chat",
+     "use": "Scans chat skills, plugins and connectors into scans/chat.json.",
+     "confirmed": true,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
     }
    ]
   },
@@ -1300,6 +1311,17 @@
       "code",
       "chat"
      ]
+    },
+    {
+     "name": "Gamma",
+     "platform": "both",
+     "use": "Account connector for decks and docs. Needs sign-in.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
     }
    ]
   },
@@ -1316,8 +1338,11 @@
      "confirmed": true,
      "status": "active",
      "seenBy": [
-      "code",
-      "chat"
+      "chat",
+      "code"
+     ],
+     "aliases": [
+      "HiggsField Connector"
      ]
     },
     {
@@ -1437,6 +1462,17 @@
      "seenBy": [
       "code"
      ]
+    },
+    {
+     "name": "easel",
+     "platform": "code",
+     "use": "Chart tool from the easel plugin.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
     }
    ]
   },
@@ -1494,7 +1530,7 @@
       "Claude_Browser"
      ],
      "seenBy": [
-      "chat"
+      "code"
      ]
     },
     {
@@ -1517,8 +1553,47 @@
      "confirmed": false,
      "status": "active",
      "seenBy": [
+      "code",
       "chat"
      ]
+    }
+   ]
+  },
+  {
+   "id": "p-hf",
+   "name": "HyperFrames",
+   "cat": "plugins",
+   "blurb": "Plugin installed on your Mac. Makes video from HTML in Claude Code.",
+   "items": [
+    {
+     "name": "hyperframes",
+     "platform": "code",
+     "use": "HTML-to-video authoring, CLI, registry and media skills.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    }
+   ]
+  },
+  {
+   "id": "p-c7",
+   "name": "Context7",
+   "cat": "plugins",
+   "blurb": "Plugin installed on your Mac. Looks up library docs; needs sign-in before it works.",
+   "items": [
+    {
+     "name": "context7",
+     "platform": "code",
+     "use": "Library documentation lookup via MCP. Needs sign-in.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
     }
    ]
   },
@@ -1529,33 +1604,11 @@
    "blurb": "Found by a scan and not sorted into a group yet. Move each into the right group in toolbox.json.",
    "items": [
     {
-     "name": "hyperframes",
-     "platform": "code",
-     "use": "HTML-to-video authoring, CLI, registry and media tools (8 skills). Local HyperFrames route for Claude Code.",
-     "confirmed": false,
-     "status": "new",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "context7",
-     "platform": "code",
-     "use": "Library documentation lookup via MCP; awaiting sign-in.",
-     "confirmed": false,
-     "status": "new",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
      "name": "anthropic-skills",
      "platform": "code",
      "use": "Bundle: docx, pdf, pptx, xlsx, docs, deep-research, skill-creator and more.",
      "confirmed": false,
-     "status": "new",
+     "status": "unseen",
      "seenBy": [
       "code"
      ],
@@ -1574,7 +1627,7 @@
      "platform": "code",
      "use": "New. Add a one-line use case.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1585,7 +1638,7 @@
      "platform": "both",
      "use": "New. Add a one-line use case.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code",
       "chat"
@@ -1597,7 +1650,7 @@
      "platform": "both",
      "use": "New. Add a one-line use case.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code",
       "chat"
@@ -1609,7 +1662,7 @@
      "platform": "both",
      "use": "New. Add a one-line use case.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code",
       "chat"
@@ -1621,7 +1674,7 @@
      "platform": "both",
      "use": "New. Add a one-line use case.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code",
       "chat"
@@ -1633,9 +1686,8 @@
      "platform": "both",
      "use": "New. Add a one-line use case.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
-      "code",
       "chat"
      ],
      "auto": true
@@ -1645,7 +1697,7 @@
      "platform": "code",
      "use": "Claude Code built-in. Edit Claude Code settings.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1656,7 +1708,7 @@
      "platform": "code",
      "use": "Claude Code built-in. Keyboard shortcut help.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1667,7 +1719,7 @@
      "platform": "code",
      "use": "Claude Code built-in. Review code changes.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1678,7 +1730,7 @@
      "platform": "code",
      "use": "Claude Code built-in. Simplify changed code.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1689,7 +1741,7 @@
      "platform": "code",
      "use": "Claude Code built-in. Reduce permission prompts.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1700,7 +1752,7 @@
      "platform": "code",
      "use": "Claude Code built-in. Run a prompt on a recurring interval.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1711,7 +1763,7 @@
      "platform": "code",
      "use": "Claude Code built-in. Scheduled tasks.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1722,7 +1774,7 @@
      "platform": "code",
      "use": "Claude Code built-in. Build with the Claude API.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1733,7 +1785,7 @@
      "platform": "code",
      "use": "Claude Code built-in. Run the project.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1744,7 +1796,7 @@
      "platform": "code",
      "use": "Claude Code built-in. Create a CLAUDE.md for a repo.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1755,7 +1807,7 @@
      "platform": "code",
      "use": "Claude Code built-in. Security review of pending changes.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1766,7 +1818,7 @@
      "platform": "both",
      "use": "Built-in guidance skill.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code",
       "chat"
@@ -1778,7 +1830,7 @@
      "platform": "both",
      "use": "Built-in guidance skill.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code",
       "chat"
@@ -1790,7 +1842,7 @@
      "platform": "both",
      "use": "Built-in guidance skill.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code",
       "chat"
@@ -1802,7 +1854,7 @@
      "platform": "both",
      "use": "Built-in guidance skill.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code",
       "chat"
@@ -1814,7 +1866,7 @@
      "platform": "both",
      "use": "Built-in guidance skill.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code",
       "chat"
@@ -1823,11 +1875,12 @@
     },
     {
      "name": "chrome-browser",
-     "platform": "chat",
+     "platform": "both",
      "use": "New. Add a one-line use case.",
-     "confirmed": false,
-     "status": "new",
+     "confirmed": true,
+     "status": "active",
      "seenBy": [
+      "code",
       "chat"
      ],
      "auto": true
@@ -1837,7 +1890,7 @@
      "platform": "chat",
      "use": "New. Add a one-line use case.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "chat"
      ],
@@ -1848,7 +1901,7 @@
      "platform": "chat",
      "use": "New. Add a one-line use case.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "chat"
      ],
@@ -1859,7 +1912,7 @@
      "platform": "chat",
      "use": "New. Add a one-line use case.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "chat"
      ],
@@ -1870,7 +1923,7 @@
      "platform": "chat",
      "use": "New. Add a one-line use case.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "chat"
      ],
@@ -1881,7 +1934,7 @@
      "platform": "chat",
      "use": "New. Add a one-line use case.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "chat"
      ],
@@ -1892,7 +1945,7 @@
      "platform": "chat",
      "use": "New. Add a one-line use case.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "chat"
      ],
@@ -1911,7 +1964,7 @@
      "platform": "both",
      "use": "Create and edit living docs in Claude.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code",
       "chat"
@@ -1923,7 +1976,7 @@
      "platform": "code",
      "use": "Search and suggest connectors.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1934,7 +1987,7 @@
      "platform": "code",
      "use": "Create and manage scheduled tasks.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1945,7 +1998,7 @@
      "platform": "code",
      "use": "Terminal access in the desktop app.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1956,7 +2009,7 @@
      "platform": "code",
      "use": "Inline visuals and widgets.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1967,7 +2020,7 @@
      "platform": "code",
      "use": "Drive the iOS Simulator.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1978,7 +2031,7 @@
      "platform": "code",
      "use": "Session, sidebar, settings, PR and window controls. Internal to the app.",
      "confirmed": false,
-     "status": "new",
+     "status": "unseen",
      "seenBy": [
       "code"
      ],
@@ -1989,7 +2042,7 @@
      "platform": "code",
      "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -2000,7 +2053,7 @@
      "platform": "code",
      "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -2011,7 +2064,7 @@
      "platform": "code",
      "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -2022,7 +2075,7 @@
      "platform": "code",
      "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -2033,7 +2086,7 @@
      "platform": "code",
      "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -2044,7 +2097,7 @@
      "platform": "code",
      "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -2055,7 +2108,7 @@
      "platform": "code",
      "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -2066,7 +2119,7 @@
      "platform": "code",
      "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
