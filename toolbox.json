@@ -380,6 +380,17 @@
       "code",
       "chat"
      ]
+    },
+    {
+     "name": "webapp-testing",
+     "platform": "code",
+     "use": "Test a web app locally with a browser.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
     }
    ]
   },
@@ -454,6 +465,17 @@
       "code",
       "chat"
      ]
+    },
+    {
+     "name": "video-making",
+     "platform": "both",
+     "use": "Plan and make a new video from scratch.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
     }
    ]
   },
@@ -616,6 +638,84 @@
    ]
   },
   {
+   "id": "docsfiles",
+   "cat": "skills",
+   "name": "Documents & files",
+   "blurb": "Read, create and edit Word, PDF, PowerPoint and Excel files.",
+   "items": [
+    {
+     "name": "docx",
+     "platform": "both",
+     "use": "Create, read and edit Word documents.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "pdf",
+     "platform": "both",
+     "use": "Read, merge, split, fill and create PDFs.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "pptx",
+     "platform": "both",
+     "use": "Create and edit PowerPoint decks.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "xlsx",
+     "platform": "both",
+     "use": "Create and edit Excel spreadsheets and CSVs.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "pdf-reading",
+     "platform": "chat",
+     "use": "Read and extract content from an uploaded PDF.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "file-reading",
+     "platform": "chat",
+     "use": "Pick the right way to read an uploaded file (PDF, Word, Excel, images, archives).",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    }
+   ]
+  },
+  {
    "id": "util",
    "cat": "skills",
    "name": "Utilities",
@@ -739,6 +839,239 @@
      "status": "new",
      "seenBy": [
       "code"
+     ],
+     "auto": true
+    }
+   ]
+  },
+  {
+   "id": "builtins",
+   "cat": "skills",
+   "name": "Built-ins & helpers",
+   "blurb": "Skills that ship with Claude Code and the Claude app, plus building and setup helpers.",
+   "items": [
+    {
+     "name": "update-config",
+     "platform": "code",
+     "use": "Change Claude Code settings and hooks.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "keybindings-help",
+     "platform": "code",
+     "use": "Customize Claude Code keyboard shortcuts.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "code-review",
+     "platform": "code",
+     "use": "Review a code change.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "simplify",
+     "platform": "code",
+     "use": "Simplify and clean up changed code.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "fewer-permission-prompts",
+     "platform": "code",
+     "use": "Cut down repeated permission prompts.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "loop",
+     "platform": "code",
+     "use": "Run a prompt again on a repeating interval.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "schedule",
+     "platform": "code",
+     "use": "Create scheduled tasks.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "claude-api",
+     "platform": "code",
+     "use": "Build apps with the Claude API.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "run",
+     "platform": "code",
+     "use": "Run the current project.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "init",
+     "platform": "code",
+     "use": "Create a CLAUDE.md for a new repo.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "security-review",
+     "platform": "code",
+     "use": "Security review of pending changes.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "dataviz",
+     "platform": "both",
+     "use": "Chart and dashboard design rules.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "artifact-design",
+     "platform": "both",
+     "use": "Design guidance for published artifacts.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "artifact-diagramming",
+     "platform": "both",
+     "use": "Diagram guidance for artifacts.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "artifact-capabilities",
+     "platform": "both",
+     "use": "Live data, storage and sharing for artifacts.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "plugin-authoring",
+     "platform": "both",
+     "use": "Build a mod or hook that changes how Claude looks or behaves.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "explain-usage",
+     "platform": "chat",
+     "use": "Explain where this session's tokens went.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "setup-claude",
+     "platform": "chat",
+     "use": "Guided setup: pick a role, install a plugin, connect tools.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "cowork-plugin",
+     "platform": "chat",
+     "use": "Create or customize a Cowork plugin.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "product-self-knowledge",
+     "platform": "chat",
+     "use": "Check facts about Claude and Anthropic products.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "chat"
      ],
      "auto": true
     }
@@ -1051,6 +1384,94 @@
       "code",
       "chat"
      ]
+    },
+    {
+     "name": "Ahrefs",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Amplitude",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Figma",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "HubSpot",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Klaviyo",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Similarweb",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Slack",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "Supermetrics",
+     "platform": "code",
+     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
     }
    ],
    "aliases": [
@@ -1242,6 +1663,18 @@
       "code",
       "chat"
      ]
+    },
+    {
+     "name": "Claude Docs",
+     "platform": "both",
+     "use": "Create and edit living docs inside Claude.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
     }
    ]
   },
@@ -1473,6 +1906,61 @@
       "code"
      ],
      "auto": true
+    },
+    {
+     "name": "mcp-registry",
+     "platform": "code",
+     "use": "Search for and suggest connectors.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "scheduled-tasks",
+     "platform": "code",
+     "use": "Create and manage scheduled tasks.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "terminal",
+     "platform": "code",
+     "use": "Terminal access in the desktop app.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "visualize",
+     "platform": "code",
+     "use": "Inline charts, diagrams and widgets in chat.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
+    },
+    {
+     "name": "iOS Simulator",
+     "platform": "code",
+     "use": "Drive the iOS Simulator.",
+     "confirmed": false,
+     "status": "active",
+     "seenBy": [
+      "code"
+     ],
+     "auto": true
     }
    ]
   },
@@ -1556,6 +2044,18 @@
       "code",
       "chat"
      ]
+    },
+    {
+     "name": "chrome-browser",
+     "platform": "both",
+     "use": "Use Claude in Chrome with your own sign-ins.",
+     "confirmed": true,
+     "status": "active",
+     "seenBy": [
+      "code",
+      "chat"
+     ],
+     "auto": true
     }
    ]
   },
@@ -1590,536 +2090,6 @@
      "use": "Library documentation lookup via MCP. Needs sign-in.",
      "confirmed": false,
      "status": "new",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    }
-   ]
-  },
-  {
-   "id": "new-plugins",
-   "cat": "plugins",
-   "name": "New plugins",
-   "blurb": "Found by a scan and not sorted into a group yet. Move each into the right group in toolbox.json.",
-   "items": [
-    {
-     "name": "anthropic-skills",
-     "platform": "code",
-     "use": "Bundle: docx, pdf, pptx, xlsx, docs, deep-research, skill-creator and more.",
-     "confirmed": false,
-     "status": "unseen",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    }
-   ]
-  },
-  {
-   "id": "new-skills",
-   "cat": "skills",
-   "name": "New skills",
-   "blurb": "Found by a scan and not sorted into a group yet. Move each into the right group in toolbox.json.",
-   "items": [
-    {
-     "name": "webapp-testing",
-     "platform": "code",
-     "use": "New. Add a one-line use case.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "docx",
-     "platform": "both",
-     "use": "New. Add a one-line use case.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "pdf",
-     "platform": "both",
-     "use": "New. Add a one-line use case.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "pptx",
-     "platform": "both",
-     "use": "New. Add a one-line use case.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "xlsx",
-     "platform": "both",
-     "use": "New. Add a one-line use case.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "video-making",
-     "platform": "both",
-     "use": "New. Add a one-line use case.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "update-config",
-     "platform": "code",
-     "use": "Claude Code built-in. Edit Claude Code settings.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "keybindings-help",
-     "platform": "code",
-     "use": "Claude Code built-in. Keyboard shortcut help.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "code-review",
-     "platform": "code",
-     "use": "Claude Code built-in. Review code changes.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "simplify",
-     "platform": "code",
-     "use": "Claude Code built-in. Simplify changed code.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "fewer-permission-prompts",
-     "platform": "code",
-     "use": "Claude Code built-in. Reduce permission prompts.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "loop",
-     "platform": "code",
-     "use": "Claude Code built-in. Run a prompt on a recurring interval.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "schedule",
-     "platform": "code",
-     "use": "Claude Code built-in. Scheduled tasks.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "claude-api",
-     "platform": "code",
-     "use": "Claude Code built-in. Build with the Claude API.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "run",
-     "platform": "code",
-     "use": "Claude Code built-in. Run the project.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "init",
-     "platform": "code",
-     "use": "Claude Code built-in. Create a CLAUDE.md for a repo.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "security-review",
-     "platform": "code",
-     "use": "Claude Code built-in. Security review of pending changes.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "dataviz",
-     "platform": "both",
-     "use": "Built-in guidance skill.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "artifact-design",
-     "platform": "both",
-     "use": "Built-in guidance skill.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "artifact-diagramming",
-     "platform": "both",
-     "use": "Built-in guidance skill.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "artifact-capabilities",
-     "platform": "both",
-     "use": "Built-in guidance skill.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "plugin-authoring",
-     "platform": "both",
-     "use": "Built-in guidance skill.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "chrome-browser",
-     "platform": "both",
-     "use": "New. Add a one-line use case.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "file-reading",
-     "platform": "chat",
-     "use": "New. Add a one-line use case.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "pdf-reading",
-     "platform": "chat",
-     "use": "New. Add a one-line use case.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "product-self-knowledge",
-     "platform": "chat",
-     "use": "New. Add a one-line use case.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "explain-usage",
-     "platform": "chat",
-     "use": "New. Add a one-line use case.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "setup-claude",
-     "platform": "chat",
-     "use": "New. Add a one-line use case.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "cowork-plugin",
-     "platform": "chat",
-     "use": "New. Add a one-line use case.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "chat"
-     ],
-     "auto": true
-    }
-   ]
-  },
-  {
-   "id": "new-connectors",
-   "cat": "connectors",
-   "name": "New connectors",
-   "blurb": "Found by a scan and not sorted into a group yet. Move each into the right group in toolbox.json.",
-   "items": [
-    {
-     "name": "Claude Docs",
-     "platform": "both",
-     "use": "Create and edit living docs in Claude.",
-     "confirmed": true,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ],
-     "auto": true
-    },
-    {
-     "name": "mcp-registry",
-     "platform": "code",
-     "use": "Search and suggest connectors.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "scheduled-tasks",
-     "platform": "code",
-     "use": "Create and manage scheduled tasks.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "terminal",
-     "platform": "code",
-     "use": "Terminal access in the desktop app.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "visualize",
-     "platform": "code",
-     "use": "Inline visuals and widgets.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "iOS Simulator",
-     "platform": "code",
-     "use": "Drive the iOS Simulator.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "Claude desktop app servers (ccd_*)",
-     "platform": "code",
-     "use": "Session, sidebar, settings, PR and window controls. Internal to the app.",
-     "confirmed": false,
-     "status": "unseen",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "Ahrefs",
-     "platform": "code",
-     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "Amplitude",
-     "platform": "code",
-     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "Figma",
-     "platform": "code",
-     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "HubSpot",
-     "platform": "code",
-     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "Klaviyo",
-     "platform": "code",
-     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "Similarweb",
-     "platform": "code",
-     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "Slack",
-     "platform": "code",
-     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code"
-     ],
-     "auto": true
-    },
-    {
-     "name": "Supermetrics",
-     "platform": "code",
-     "use": "Bundled with the Marketing plugin. Needs sign-in before use.",
-     "confirmed": false,
-     "status": "active",
      "seenBy": [
       "code"
      ],

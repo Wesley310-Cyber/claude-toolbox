@@ -226,11 +226,11 @@ function renderMap(){
   L.list.forEach(g=>{
     const cn=counts(g), tot=cn.chat+cn.code+cn.both, off=tot===0;
     const ls=lines(g.name), w=118, h=54;
-    s+='<g class="gnode'+(g.id===sel?' sel':'')+(off?' off':'')+'" data-g="'+g.id+'" tabindex="0" role="button" aria-label="'+esc(g.name)+', '+tot+' items" transform="translate('+g.x.toFixed(1)+','+g.y.toFixed(1)+')">';
+    s+='<g class="gnode'+(g.id===sel?' sel':'')+(off?' off':'')+'" data-g="'+g.id+'" tabindex="0" role="button" aria-label="'+esc(g.name)+', '+tot+(tot===1?' item':' items')+'" transform="translate('+g.x.toFixed(1)+','+g.y.toFixed(1)+')">';
     s+='<rect class="pill" x="'+(-w/2)+'" y="'+(-h/2)+'" width="'+w+'" height="'+h+'" rx="9"/>';
     if(ls.length===1){s+='<text class="gtxt" y="-4">'+esc(ls[0])+'</text>';}
     else{s+='<text class="gtxt" y="-9">'+esc(ls[0])+'</text><text class="gtxt" y="7">'+esc(ls[1])+'</text>';}
-    s+='<text class="gcount" y="'+(ls.length===1?12:17)+'" '+(ls.length===1?'':'style="display:none"')+'>'+tot+' items</text>';
+    s+='<text class="gcount" y="'+(ls.length===1?12:17)+'" '+(ls.length===1?'':'style="display:none"')+'>'+tot+(tot===1?' item':' items')+'</text>';
     if(tot>0){let x=-w/2+10;const bw=w-20;
       [['chat','s-chat'],['code','s-code'],['both','s-both']].forEach(k=>{const ww=bw*cn[k[0]]/tot;if(ww>0){s+='<rect class="'+k[1]+'" x="'+x.toFixed(1)+'" y="'+(h/2-9)+'" width="'+ww.toFixed(1)+'" height="4" rx="2"/>';x+=ww;}});}
     s+='</g>';
