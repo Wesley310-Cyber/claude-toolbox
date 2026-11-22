@@ -1,8 +1,8 @@
 {
  "version": 1,
- "scanned": "2026-11-21",
+ "scanned": "2026-11-22",
  "sources": {
-  "chat": "2026-11-21",
+  "chat": "2026-11-22",
   "code": "2026-11-21"
  },
  "groups": [
@@ -482,30 +482,74 @@
   {
    "id": "mkt",
    "cat": "skills",
-   "name": "Marketing & growth",
-   "blurb": "Your marketing playbook skills.",
+   "name": "Marketing & sales",
+   "blurb": "Selling and marketing skills (Corey Haines v2 set, service-focused).",
    "items": [
     {
-     "name": "product-marketing-context",
-     "platform": "both",
-     "use": "Foundation doc the other marketing skills read; start here.",
+     "name": "offers",
+     "platform": "chat",
+     "use": "Build the offer itself: value, bonuses, guarantee, payment terms. Start here.",
      "confirmed": false,
-     "status": "active",
+     "status": "new",
      "seenBy": [
-      "code",
       "chat"
-     ]
+     ],
+     "auto": true
     },
     {
-     "name": "launch-strategy",
-     "platform": "both",
-     "use": "Launch plan and checklist.",
+     "name": "prospecting",
+     "platform": "chat",
+     "use": "Build and qualify prospect lists; warm paths from your own network.",
      "confirmed": false,
-     "status": "active",
+     "status": "new",
      "seenBy": [
-      "code",
       "chat"
-     ]
+     ],
+     "auto": true
+    },
+    {
+     "name": "cold-email",
+     "platform": "chat",
+     "use": "Cold outbound emails, follow-ups and multichannel cadences.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "sales-enablement",
+     "platform": "chat",
+     "use": "Proposals, one-pagers, call scripts, objection handling.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "customer-research",
+     "platform": "chat",
+     "use": "Turn client interviews and reviews into positioning and copy.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "pricing",
+     "platform": "chat",
+     "use": "Tiers, packaging and what to charge.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
     },
     {
      "name": "copywriting",
@@ -519,9 +563,31 @@
      ]
     },
     {
-     "name": "page-cro",
+     "name": "cro",
+     "platform": "chat",
+     "use": "Fix a page or form that is not converting.",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "emails",
+     "platform": "chat",
+     "use": "Welcome, nurture and re-engagement sequences (not cold email).",
+     "confirmed": false,
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
+    },
+    {
+     "name": "lead-magnets",
      "platform": "both",
-     "use": "Fix a page that is not converting.",
+     "use": "Plan an opt-in offer and how to distribute it.",
      "confirmed": false,
      "status": "active",
      "seenBy": [
@@ -530,16 +596,20 @@
      ]
     },
     {
-     "name": "email-sequence",
-     "platform": "both",
-     "use": "Drip, welcome and nurture flows.",
+     "name": "referrals",
+     "platform": "chat",
+     "use": "Referral, partner and review programs.",
      "confirmed": false,
-     "status": "active"
+     "status": "new",
+     "seenBy": [
+      "chat"
+     ],
+     "auto": true
     },
     {
-     "name": "social-content",
+     "name": "marketing-psychology",
      "platform": "both",
-     "use": "Posts, threads, reels and short-form scripts.",
+     "use": "Apply buyer-behavior principles.",
      "confirmed": false,
      "status": "active",
      "seenBy": [
@@ -559,75 +629,9 @@
      ]
     },
     {
-     "name": "paid-ads",
-     "platform": "both",
-     "use": "Campaign strategy for Google, Meta, LinkedIn.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ]
-    },
-    {
      "name": "ad-creative",
      "platform": "both",
      "use": "Ad copy variations at scale.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ]
-    },
-    {
-     "name": "pricing-strategy",
-     "platform": "both",
-     "use": "Tiers, packaging, willingness to pay.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ]
-    },
-    {
-     "name": "lead-magnets",
-     "platform": "both",
-     "use": "Plan an opt-in offer and how to distribute it.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ]
-    },
-    {
-     "name": "referral-program",
-     "platform": "both",
-     "use": "Referral and affiliate design.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ]
-    },
-    {
-     "name": "marketing-ideas",
-     "platform": "both",
-     "use": "Brainstorm when you are stuck.",
-     "confirmed": false,
-     "status": "active",
-     "seenBy": [
-      "code",
-      "chat"
-     ]
-    },
-    {
-     "name": "marketing-psychology",
-     "platform": "both",
-     "use": "Apply buyer-behavior principles.",
      "confirmed": false,
      "status": "active",
      "seenBy": [
@@ -650,8 +654,7 @@
      "confirmed": true,
      "status": "active",
      "seenBy": [
-      "code",
-      "chat"
+      "code"
      ],
      "auto": true
     },
@@ -662,8 +665,7 @@
      "confirmed": true,
      "status": "active",
      "seenBy": [
-      "code",
-      "chat"
+      "code"
      ],
      "auto": true
     },
@@ -674,8 +676,7 @@
      "confirmed": true,
      "status": "active",
      "seenBy": [
-      "code",
-      "chat"
+      "code"
      ],
      "auto": true
     },
@@ -686,8 +687,7 @@
      "confirmed": true,
      "status": "active",
      "seenBy": [
-      "code",
-      "chat"
+      "code"
      ],
      "auto": true
     },
@@ -836,9 +836,10 @@
      "platform": "chat",
      "use": "Scans chat skills, plugins and connectors into scans/chat.json.",
      "confirmed": true,
-     "status": "new",
+     "status": "active",
      "seenBy": [
-      "code"
+      "code",
+      "chat"
      ],
      "auto": true
     }
@@ -978,8 +979,7 @@
      "confirmed": true,
      "status": "active",
      "seenBy": [
-      "code",
-      "chat"
+      "code"
      ],
      "auto": true
     },
@@ -990,8 +990,7 @@
      "confirmed": true,
      "status": "active",
      "seenBy": [
-      "code",
-      "chat"
+      "code"
      ],
      "auto": true
     },
@@ -1002,8 +1001,7 @@
      "confirmed": true,
      "status": "active",
      "seenBy": [
-      "code",
-      "chat"
+      "code"
      ],
      "auto": true
     },
@@ -1014,8 +1012,7 @@
      "confirmed": true,
      "status": "active",
      "seenBy": [
-      "code",
-      "chat"
+      "code"
      ],
      "auto": true
     },
@@ -1026,8 +1023,7 @@
      "confirmed": true,
      "status": "active",
      "seenBy": [
-      "code",
-      "chat"
+      "code"
      ],
      "auto": true
     },
@@ -1381,8 +1377,7 @@
      "confirmed": false,
      "status": "active",
      "seenBy": [
-      "code",
-      "chat"
+      "code"
      ]
     },
     {
@@ -1671,8 +1666,7 @@
      "confirmed": true,
      "status": "active",
      "seenBy": [
-      "code",
-      "chat"
+      "code"
      ],
      "auto": true
     }
@@ -1750,7 +1744,7 @@
      "platform": "both",
      "use": "Account connector for decks and docs. Needs sign-in.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -1771,8 +1765,8 @@
      "confirmed": true,
      "status": "active",
      "seenBy": [
-      "chat",
-      "code"
+      "code",
+      "chat"
      ],
      "aliases": [
       "HiggsField Connector"
@@ -1901,7 +1895,7 @@
      "platform": "code",
      "use": "Chart tool from the easel plugin.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
@@ -2070,12 +2064,15 @@
      "platform": "code",
      "use": "HTML-to-video authoring, CLI, registry and media skills.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
      "auto": true
     }
+   ],
+   "seenBy": [
+    "code"
    ]
   },
   {
@@ -2089,12 +2086,15 @@
      "platform": "code",
      "use": "Library documentation lookup via MCP. Needs sign-in.",
      "confirmed": false,
-     "status": "new",
+     "status": "active",
      "seenBy": [
       "code"
      ],
      "auto": true
     }
+   ],
+   "seenBy": [
+    "code"
    ]
   }
  ],
@@ -2103,7 +2103,7 @@
    "id": "site",
    "name": "Website for a small business",
    "why": "Brief and look in chat, build and test in Claude Code, deploy a private draft first and go public at launch.",
-   "steps": "Order: brief → look → build → test → private deploy → launch.",
+   "steps": "Order: brief \u2192 look \u2192 build \u2192 test \u2192 private deploy \u2192 launch.",
    "items": [
     {
      "name": "web-build-brief",
@@ -2166,20 +2166,20 @@
    "id": "venture",
    "name": "Venture research & validation",
    "why": "This is a thinking-and-documents job, so almost all of it lives comfortably in chat.",
-   "steps": "Order: sourcing → triage → Stage 1 → Stage 2 → Stage 3 → Stage 4.",
+   "steps": "Order: sourcing \u2192 triage \u2192 Stage 1 \u2192 Stage 2 \u2192 Stage 3 \u2192 Stage 4.",
    "items": [
     {
-     "name": "niche-sourcing-engine → niche-triage-gate",
+     "name": "niche-sourcing-engine \u2192 niche-triage-gate",
      "where": "chat",
      "use": "Generate and score candidates."
     },
     {
-     "name": "market-intelligence → spin-analysis",
+     "name": "market-intelligence \u2192 spin-analysis",
      "where": "chat",
      "use": "Stages 1 and 2 with live web research."
     },
     {
-     "name": "feasibility-study → venture-design",
+     "name": "feasibility-study \u2192 venture-design",
      "where": "chat",
      "use": "Stages 3 and 4."
     },
@@ -2209,7 +2209,7 @@
    "id": "brand",
    "name": "Brand kit / palette",
    "why": "Per your standing rule, every new palette gets a Notion page, a Claude Design system and Brand Kit options.",
-   "steps": "Order: extend → analyze → build three kits → file → add to viewer.",
+   "steps": "Order: extend \u2192 analyze \u2192 build three kits \u2192 file \u2192 add to viewer.",
    "items": [
     {
      "name": "palette-extender",
@@ -2252,7 +2252,7 @@
    "id": "video",
    "name": "Video & motion content",
    "why": "Scripts and prompts in chat; anything that renders locally runs in Claude Code.",
-   "steps": "Order: concept → script → prompts or build → render → clip.",
+   "steps": "Order: concept \u2192 script \u2192 prompts or build \u2192 render \u2192 clip.",
    "items": [
     {
      "name": "video-ad-director",
@@ -2305,7 +2305,7 @@
    "id": "books",
    "name": "Book study",
    "why": "Critical analysis and summaries in chat; the sites deploy through the Netlify connector from either side.",
-   "steps": "Order: critical analysis → summary assets → deck, briefing, infographic, mind map → wisdom database.",
+   "steps": "Order: critical analysis \u2192 summary assets \u2192 deck, briefing, infographic, mind map \u2192 wisdom database.",
    "items": [
     {
      "name": "book-critical-analysis",
@@ -2353,32 +2353,37 @@
    "id": "launch",
    "name": "Launch & marketing",
    "why": "Strategy and copy in chat; automation and posting hooks through connectors.",
-   "steps": "Order: context → strategy → copy → channels → measure.",
+   "steps": "Order: offer \u2192 price \u2192 copy \u2192 outreach \u2192 measure.",
    "items": [
     {
-     "name": "product-marketing-context",
+     "name": "offers / customer-research",
      "where": "chat",
-     "use": "Run first so every other skill shares the positioning."
+     "use": "Build the offer and learn the buyer's words first."
     },
     {
-     "name": "launch-strategy / pricing-strategy",
+     "name": "pricing",
      "where": "chat",
-     "use": "Plan the launch and the price."
+     "use": "Set tiers and what to charge."
     },
     {
-     "name": "copywriting / page-cro",
+     "name": "copywriting / cro",
      "where": "chat",
      "use": "Page copy and conversion fixes."
     },
     {
-     "name": "email-sequence / social-content",
+     "name": "emails",
      "where": "chat",
-     "use": "Flows and posts."
+     "use": "Welcome and nurture flows."
     },
     {
-     "name": "paid-ads / ad-creative",
+     "name": "prospecting / cold-email / sales-enablement",
      "where": "chat",
-     "use": "Campaigns and variations."
+     "use": "Find prospects, reach out, and close."
+    },
+    {
+     "name": "ad-creative",
+     "where": "chat",
+     "use": "Ad copy variations."
     },
     {
      "name": "Marketing plugin",

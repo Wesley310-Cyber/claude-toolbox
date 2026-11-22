@@ -1,366 +1,391 @@
 {
  "source": "chat",
- "scannedAt": "2026-11-21",
- "note": "From ListSkills, ListPlugins and ListConnectors in a chat session. Gmail needs reconnecting.",
+ "scannedAt": "2026-11-22",
  "items": [
   {
-   "name": "8B Website Builder",
-   "type": "plugin"
+   "name": "lead-magnets",
+   "type": "skill",
+   "use": "Plan lead magnets and content offers"
   },
   {
-   "name": "AnimatedWebs",
-   "type": "plugin"
+   "name": "offers",
+   "type": "skill",
+   "use": "Design service, agency or high-ticket offers: value, bonuses, guarantees"
   },
   {
-   "name": "Context Optimizer (CCO)",
-   "type": "plugin"
+   "name": "cold-email",
+   "type": "skill",
+   "use": "Write and run cold outbound emails, follow-ups and cadences"
   },
   {
-   "name": "Remotion",
-   "type": "plugin"
+   "name": "prospecting",
+   "type": "skill",
+   "use": "Build and qualify prospect lists, buying signals, pre-outreach research"
   },
   {
-   "name": "Notion plugin",
-   "type": "plugin"
+   "name": "sales-enablement",
+   "type": "skill",
+   "use": "Sales decks, proposals, one-pagers, scripts, objection handling"
   },
   {
-   "name": "Marketing plugin",
-   "type": "plugin"
-  },
-  {
-   "name": "Frontend Design",
-   "type": "plugin"
-  },
-  {
-   "name": "Playwright",
-   "type": "plugin"
-  },
-  {
-   "name": "21st.dev",
-   "type": "plugin"
-  },
-  {
-   "name": "copywriting",
-   "type": "skill"
-  },
-  {
-   "name": "prompt-master",
-   "type": "skill"
-  },
-  {
-   "name": "webgl-concept-report",
-   "type": "skill"
-  },
-  {
-   "name": "venture-design",
-   "type": "skill"
-  },
-  {
-   "name": "feasibility-study",
-   "type": "skill"
-  },
-  {
-   "name": "market-intelligence",
-   "type": "skill"
-  },
-  {
-   "name": "niche-sourcing-engine",
-   "type": "skill"
-  },
-  {
-   "name": "niche-triage-gate",
-   "type": "skill"
-  },
-  {
-   "name": "crucible-standard",
-   "type": "skill"
-  },
-  {
-   "name": "fitts-framework-governance",
-   "type": "skill"
-  },
-  {
-   "name": "framework-mindmap",
-   "type": "skill"
-  },
-  {
-   "name": "board-director-arnault",
-   "type": "skill"
-  },
-  {
-   "name": "business-math-explainer",
-   "type": "skill"
-  },
-  {
-   "name": "notion-filer",
-   "type": "skill"
-  },
-  {
-   "name": "book-critical-analysis",
-   "type": "skill"
-  },
-  {
-   "name": "book-executive-briefing-white-paper",
-   "type": "skill"
-  },
-  {
-   "name": "book-gemini-summary-white-paper",
-   "type": "skill"
-  },
-  {
-   "name": "book-infographic-white-paper",
-   "type": "skill"
-  },
-  {
-   "name": "book-mindmap-navy-signal",
-   "type": "skill"
-  },
-  {
-   "name": "book-summary-deck",
-   "type": "skill"
-  },
-  {
-   "name": "web-build-brief",
-   "type": "skill"
-  },
-  {
-   "name": "web-design-after-action-review",
-   "type": "skill"
-  },
-  {
-   "name": "motionsites-web-builder",
-   "type": "skill"
-  },
-  {
-   "name": "design-brand-kit-creation",
-   "type": "skill"
-  },
-  {
-   "name": "palette-analysis",
-   "type": "skill"
-  },
-  {
-   "name": "luxury-brand-styling",
-   "type": "skill"
-  },
-  {
-   "name": "video-ad-director",
-   "type": "skill"
-  },
-  {
-   "name": "video-prompt-engineer",
-   "type": "skill"
-  },
-  {
-   "name": "seedance-prompt-engineer",
-   "type": "skill"
-  },
-  {
-   "name": "dot-matrix-video",
-   "type": "skill"
-  },
-  {
-   "name": "music-motion-video",
-   "type": "skill"
-  },
-  {
-   "name": "paid-ads",
-   "type": "skill"
-  },
-  {
-   "name": "launch-strategy",
-   "type": "skill"
-  },
-  {
-   "name": "content-strategy",
-   "type": "skill"
-  },
-  {
-   "name": "page-cro",
-   "type": "skill"
-  },
-  {
-   "name": "pricing-strategy",
-   "type": "skill"
-  },
-  {
-   "name": "referral-program",
-   "type": "skill"
-  },
-  {
-   "name": "marketing-ideas",
-   "type": "skill"
+   "name": "customer-research",
+   "type": "skill",
+   "use": "Customer interviews, reviews and voice-of-customer analysis"
   },
   {
    "name": "marketing-psychology",
-   "type": "skill"
+   "type": "skill",
+   "use": "Behavioral science and persuasion applied to marketing"
   },
   {
-   "name": "lead-magnets",
-   "type": "skill"
+   "name": "cro",
+   "type": "skill",
+   "use": "Audit pages and forms to improve conversions"
   },
   {
-   "name": "ad-creative",
-   "type": "skill"
+   "name": "emails",
+   "type": "skill",
+   "use": "Lifecycle email sequences (welcome, nurture, re-engagement)"
   },
   {
-   "name": "research-audit-verdict",
-   "type": "skill"
+   "name": "pricing",
+   "type": "skill",
+   "use": "Pricing, tiers, packaging and pricing-page audits"
   },
   {
-   "name": "learning-reference-guide",
-   "type": "skill"
+   "name": "referrals",
+   "type": "skill",
+   "use": "Referral, affiliate, partner and review programs"
   },
   {
-   "name": "wisdom-db-sync",
-   "type": "skill"
+   "name": "toolbox-scan-chat",
+   "type": "skill",
+   "use": "Scan chat skills/plugins/connectors for the toolbox"
   },
   {
-   "name": "ai-weekly-intelligence-briefing",
-   "type": "skill"
+   "name": "business-math-explainer",
+   "type": "skill",
+   "use": "70-second MagnaDiem business-math explainer videos"
   },
   {
-   "name": "poetic-voice-devotional",
-   "type": "skill"
+   "name": "book-executive-briefing-white-paper",
+   "type": "skill",
+   "use": "Book executive briefing as a White Paper site"
+  },
+  {
+   "name": "book-gemini-summary-white-paper",
+   "type": "skill",
+   "use": "Book Gemini Summary as a White Paper site"
+  },
+  {
+   "name": "book-infographic-white-paper",
+   "type": "skill",
+   "use": "Isometric book infographic in the White Paper kit"
+  },
+  {
+   "name": "book-mindmap-navy-signal",
+   "type": "skill",
+   "use": "Interactive book mind map in Navy Signal"
   },
   {
    "name": "palette-extender",
-   "type": "skill"
+   "type": "skill",
+   "use": "Extend a 3-color palette to a balanced 5-color palette"
   },
   {
-   "name": "product-marketing-context",
-   "type": "skill"
+   "name": "web-design-after-action-review",
+   "type": "skill",
+   "use": "After Action Review on a finished website build"
   },
   {
-   "name": "email-sequence",
-   "type": "skill"
+   "name": "board-director-arnault",
+   "type": "skill",
+   "use": "Virtual board director modeled on Bernard Arnault"
   },
   {
-   "name": "social-content",
-   "type": "skill"
+   "name": "music-motion-video",
+   "type": "skill",
+   "use": "Music motion-graphics video with lyric captions"
+  },
+  {
+   "name": "dot-matrix-video",
+   "type": "skill",
+   "use": "15-second Black Dot Matrix principle videos"
+  },
+  {
+   "name": "notion-filer",
+   "type": "skill",
+   "use": "File outputs into Wesley's Notion workspace"
+  },
+  {
+   "name": "research-audit-verdict",
+   "type": "skill",
+   "use": "Audit an outside AI research report and give a verdict"
+  },
+  {
+   "name": "web-build-brief",
+   "type": "skill",
+   "use": "Small-business website brief plus Claude Code build plan"
+  },
+  {
+   "name": "book-summary-deck",
+   "type": "skill",
+   "use": "40-slide book summary deck in the White Paper kit"
+  },
+  {
+   "name": "motionsites-web-builder",
+   "type": "skill",
+   "use": "Cinematic websites and Lovable/Bolt/v0 prompts"
+  },
+  {
+   "name": "design-brand-kit-creation",
+   "type": "skill",
+   "use": "Three brand kit colorways as Design system, canvas and Notion page"
+  },
+  {
+   "name": "video-prompt-engineer",
+   "type": "skill",
+   "use": "Generation-ready video prompts for Higgsfield or Google Flow"
+  },
+  {
+   "name": "poetic-voice-devotional",
+   "type": "skill",
+   "use": "Devotional poetic voice"
+  },
+  {
+   "name": "prompt-master",
+   "type": "skill",
+   "use": "Optimized prompts for specific AI tools"
+  },
+  {
+   "name": "framework-mindmap",
+   "type": "skill",
+   "use": "Fitts Framework interactive mind map with version diff"
+  },
+  {
+   "name": "wisdom-db-sync",
+   "type": "skill",
+   "use": "Sync book wisdom extracts to the Notion wisdom DB"
+  },
+  {
+   "name": "book-critical-analysis",
+   "type": "skill",
+   "use": "Critical analysis of a book against the Fitts Framework"
+  },
+  {
+   "name": "niche-triage-gate",
+   "type": "skill",
+   "use": "Phase 1 triage: score niche candidates"
+  },
+  {
+   "name": "niche-sourcing-engine",
+   "type": "skill",
+   "use": "Phase 1 sourcing: generate niche candidates"
+  },
+  {
+   "name": "venture-design",
+   "type": "skill",
+   "use": "Stage 4 Venture Design blueprint"
   },
   {
    "name": "spin-analysis",
-   "type": "skill"
+   "type": "skill",
+   "use": "Stage 2 SPIN buyer-psychology analysis"
   },
   {
-   "name": "docx",
-   "type": "skill"
+   "name": "feasibility-study",
+   "type": "skill",
+   "use": "Stage 3 Feasibility Study with 14/20 gate"
   },
   {
-   "name": "pdf",
-   "type": "skill"
+   "name": "seedance-prompt-engineer",
+   "type": "skill",
+   "use": "Seedance 2.0 JSON video prompts (superseded by video-prompt-engineer)"
   },
   {
-   "name": "pptx",
-   "type": "skill"
+   "name": "video-ad-director",
+   "type": "skill",
+   "use": "Creative director for video ad concepts, scripts, storyboards"
   },
   {
-   "name": "xlsx",
-   "type": "skill"
+   "name": "fitts-framework-governance",
+   "type": "skill",
+   "use": "Rules for changing the Fitts Framework"
   },
   {
-   "name": "docs",
-   "type": "skill"
+   "name": "crucible-standard",
+   "type": "skill",
+   "use": "Stress-test an existing plan or assumption"
   },
   {
-   "name": "deep-research",
-   "type": "skill"
+   "name": "webgl-concept-report",
+   "type": "skill",
+   "use": "WebGL report encoding a concept's verdict"
   },
   {
-   "name": "skill-creator",
-   "type": "skill"
+   "name": "market-intelligence",
+   "type": "skill",
+   "use": "Stage 1 Market Intelligence white paper"
+  },
+  {
+   "name": "luxury-brand-styling",
+   "type": "skill",
+   "use": "MagnusUnus luxury house style"
+  },
+  {
+   "name": "learning-reference-guide",
+   "type": "skill",
+   "use": "Reference guide from tutorials and transcripts"
+  },
+  {
+   "name": "palette-analysis",
+   "type": "skill",
+   "use": "Full palette evaluation and documentation workflow"
+  },
+  {
+   "name": "content-strategy",
+   "type": "skill",
+   "use": "Plan content topics and pillars"
+  },
+  {
+   "name": "copywriting",
+   "type": "skill",
+   "use": "Website marketing copy"
+  },
+  {
+   "name": "ad-creative",
+   "type": "skill",
+   "use": "Ad copy variations at scale"
+  },
+  {
+   "name": "ai-weekly-intelligence-briefing",
+   "type": "skill",
+   "use": "Weekly summary of the Rundown newsletter"
   },
   {
    "name": "canvas-design",
-   "type": "skill"
-  },
-  {
-   "name": "theme-factory",
-   "type": "skill"
-  },
-  {
-   "name": "web-artifacts-builder",
-   "type": "skill"
-  },
-  {
-   "name": "mcp-builder",
-   "type": "skill"
-  },
-  {
-   "name": "morning",
-   "type": "skill"
-  },
-  {
-   "name": "import-memory",
-   "type": "skill"
-  },
-  {
-   "name": "google-workspace",
-   "type": "skill"
-  },
-  {
-   "name": "video-making",
-   "type": "skill"
+   "type": "skill",
+   "use": "Static visual art as PNG/PDF"
   },
   {
    "name": "chrome-browser",
-   "type": "skill"
+   "type": "skill",
+   "use": "Guide for Claude in Chrome"
   },
   {
    "name": "computer-use",
-   "type": "skill"
+   "type": "skill",
+   "use": "Guide for desktop computer use"
   },
   {
-   "name": "built-in-browser",
-   "type": "skill"
+   "name": "deep-research",
+   "type": "skill",
+   "use": "Multi-source research reports"
   },
   {
-   "name": "dataviz",
-   "type": "skill"
+   "name": "docs",
+   "type": "skill",
+   "use": "Editable Claude Docs"
   },
   {
-   "name": "artifact-design",
-   "type": "skill"
+   "name": "google-workspace",
+   "type": "skill",
+   "use": "Create or change Google Docs, Sheets, Slides"
   },
   {
-   "name": "artifact-diagramming",
-   "type": "skill"
+   "name": "import-memory",
+   "type": "skill",
+   "use": "Import memory from another AI assistant"
   },
   {
-   "name": "artifact-capabilities",
-   "type": "skill"
+   "name": "mcp-builder",
+   "type": "skill",
+   "use": "Build MCP servers"
   },
   {
-   "name": "plugin-authoring",
-   "type": "skill"
+   "name": "morning",
+   "type": "skill",
+   "use": "Morning brief"
   },
   {
-   "name": "file-reading",
-   "type": "skill"
+   "name": "skill-creator",
+   "type": "skill",
+   "use": "Create and improve skills"
   },
   {
-   "name": "pdf-reading",
-   "type": "skill"
+   "name": "theme-factory",
+   "type": "skill",
+   "use": "Theme styling for artifacts"
   },
   {
-   "name": "product-self-knowledge",
-   "type": "skill"
+   "name": "web-artifacts-builder",
+   "type": "skill",
+   "use": "Multi-component React artifacts"
   },
   {
-   "name": "explain-usage",
-   "type": "skill"
+   "name": "8B Website Builder",
+   "type": "plugin",
+   "use": "Animated websites and landing pages in chat"
   },
   {
-   "name": "setup-claude",
-   "type": "skill"
+   "name": "AnimatedWebs",
+   "type": "plugin",
+   "use": "Cinematic animated websites, backgrounds, gradients, components"
   },
   {
-   "name": "cowork-plugin",
-   "type": "skill"
+   "name": "Context Optimizer (CCO)",
+   "type": "plugin",
+   "use": "Context/token cost control for Claude Code"
+  },
+  {
+   "name": "Remotion",
+   "type": "plugin",
+   "use": "Programmatic React video creation"
+  },
+  {
+   "name": "Notion plugin",
+   "type": "plugin",
+   "use": "Notion skills and MCP for Claude Code"
+  },
+  {
+   "name": "Marketing plugin",
+   "type": "plugin",
+   "use": "Content, campaigns, SEO audit, performance reports"
+  },
+  {
+   "name": "Frontend Design",
+   "type": "plugin",
+   "use": "Frontend design guidance for UI work"
+  },
+  {
+   "name": "Playwright",
+   "type": "plugin",
+   "use": "Browser automation and end-to-end testing"
+  },
+  {
+   "name": "21st.dev",
+   "type": "plugin",
+   "use": "UI components and themes"
+  },
+  {
+   "name": "21st Dev",
+   "type": "connector"
+  },
+  {
+   "name": "AnimatedWebs MCP",
+   "type": "connector"
+  },
+  {
+   "name": "Canva",
+   "type": "connector"
   },
   {
    "name": "Gmail",
+   "type": "connector",
+   "use": "Needs reconnecting"
+  },
+  {
+   "name": "GoDaddy",
    "type": "connector"
   },
   {
@@ -368,11 +393,11 @@
    "type": "connector"
   },
   {
-   "name": "Google Drive",
+   "name": "Google Docs",
    "type": "connector"
   },
   {
-   "name": "Google Docs",
+   "name": "Google Drive",
    "type": "connector"
   },
   {
@@ -384,23 +409,7 @@
    "type": "connector"
   },
   {
-   "name": "Notion",
-   "type": "connector"
-  },
-  {
-   "name": "Canva",
-   "type": "connector"
-  },
-  {
-   "name": "Netlify",
-   "type": "connector"
-  },
-  {
-   "name": "Lucid",
-   "type": "connector"
-  },
-  {
-   "name": "Make",
+   "name": "HiggsField Connector",
    "type": "connector"
   },
   {
@@ -408,36 +417,69 @@
    "type": "connector"
   },
   {
+   "name": "Lucid",
+   "type": "connector"
+  },
+  {
    "name": "Magnific",
    "type": "connector"
   },
   {
-   "name": "HiggsField",
+   "name": "Make",
+   "type": "connector"
+  },
+  {
+   "name": "Netlify",
+   "type": "connector"
+  },
+  {
+   "name": "Notion",
    "type": "connector"
   },
   {
    "name": "OpusClip",
-   "type": "connector"
-  },
-  {
-   "name": "AnimatedWebs MCP",
-   "type": "connector"
+   "type": "connector",
+   "use": "MCP access requires Pro plan or higher"
   },
   {
    "name": "Zoom for Claude",
    "type": "connector"
   },
   {
-   "name": "GoDaddy",
-   "type": "connector"
+   "name": "video-making",
+   "type": "skill",
+   "use": "Built-in guide before making a new video"
   },
   {
-   "name": "21st Dev",
-   "type": "connector"
+   "name": "pdf-reading",
+   "type": "skill",
+   "use": "Read and inspect PDFs"
   },
   {
-   "name": "Claude Docs",
-   "type": "connector"
+   "name": "file-reading",
+   "type": "skill",
+   "use": "Router for reading uploaded files"
+  },
+  {
+   "name": "explain-usage",
+   "type": "skill",
+   "use": "Explain where a session's tokens went"
+  },
+  {
+   "name": "setup-claude",
+   "type": "skill",
+   "use": "Guided Claude setup"
+  },
+  {
+   "name": "cowork-plugin",
+   "type": "skill",
+   "use": "Create or customize a plugin"
+  },
+  {
+   "name": "product-self-knowledge",
+   "type": "skill",
+   "use": "Facts about Anthropic products"
   }
- ]
+ ],
+ "note": "From ListSkills, ListPlugins and ListConnectors in a chat session. Gmail needs reconnecting."
 }
