@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+
 /* Layout: header → view toggle → [radial map | detail panel] or [project planner].
    Pall Mall White Paper kit: white page, navy type, gold only as rules and fills. */
 :root{
@@ -119,77 +120,146 @@ footer{margin-top:30px;color:var(--muted);font-size:12.5px;border-top:1px solid 
   .panel{position:static;max-height:none}
 }
 @media (prefers-reduced-motion:no-preference){ .chip,.seg button{transition:background .15s,border-color .15s} }
+
+/* ===== v2: full-width navy hero, white paper below ===== */
+body{padding:0}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(16px,env(safe-area-inset-left,0px))}
+header{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between;padding:22px 0 14px;margin:0 0 16px;border-bottom:2px solid var(--gold)}
+h1{font-size:clamp(28px,4vw,38px)}
+.sub{max-width:62ch;font-size:14px}
+.scan{margin-top:6px}
+
+.hero{--h-bg:#0b1530;--h-pill:#15244a;--h-line:#3d507f;--h-muted:#a9b4cf;--h-gold:#d4ae5c;--h-chat:#e8ecf7;--h-code:#d4ae5c;--h-both:#7f8fb8;
+  background:radial-gradient(120% 95% at 50% 42%,#142550 0%,var(--h-bg) 72%);color:#fff;
+  padding:14px max(16px,env(safe-area-inset-left,0px)) 12px}
+.hero-in{max-width:1760px;margin:0 auto}
+.hero-top{display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;justify-content:space-between;margin-bottom:4px}
+.hero .filters .lab,.hero .navcat{color:var(--h-muted)}
+.hero .chip{background:transparent;border-color:#3d507f;color:#fff}
+.hero .chip:hover{border-color:var(--h-gold)}
+.hero .chip[aria-pressed="true"],.hero .navbtns .chip[aria-pressed="true"]{background:var(--h-gold);border-color:var(--h-gold);color:#0b1530;box-shadow:none}
+.hero button:focus-visible,.hero [tabindex]:focus-visible{outline-color:#fff}
+.hero .mapbox{border:0;background:none;padding:0}
+.hero .mapbox svg{max-height:calc(100vh - 292px);min-height:360px}
+.hero .legend{justify-content:center;color:var(--h-muted);margin:8px 0 0;padding-top:10px;border-top:1px solid #243459;gap:8px 22px}
+.hero .dot.ok{background:#fff}.hero .dot.guess{border-color:var(--h-muted)}
+.sw{display:inline-block;width:22px;height:6px;border-radius:3px}
+
+.hero svg .edge{stroke:var(--h-line);stroke-width:1.3;transition:stroke .2s,stroke-width .2s}
+.hero svg .edge.lit{stroke:var(--h-gold);stroke-width:2.8}
+.hero svg .edge.hop2{transition-delay:.13s}
+.hero svg .core{fill:var(--h-gold)}.hero svg .coretxt{fill:#0b1530}
+.hero svg .cat{fill:#0b1530;stroke:var(--h-gold);stroke-width:1.8}
+.hero svg .cattxt{fill:#fff}
+.hero svg .pill{fill:var(--h-pill);stroke:#4a5f94;stroke-width:1.3}
+.hero svg .gnode:hover .pill,.hero svg .gnode:focus-visible .pill{stroke:var(--h-gold);stroke-width:2.4}
+.hero svg .gnode:focus-visible{outline:none}
+.hero svg .gnode.sel .pill{stroke:var(--h-gold);stroke-width:3.2;fill:#1d3166}
+.hero svg .gtxt{fill:#fff;font-size:15px}
+.hero svg .gcount{fill:var(--h-muted)}
+.hero svg .s-chat{fill:var(--h-chat)}.hero svg .s-code{fill:var(--h-code)}.hero svg .s-both{fill:var(--h-both)}
+.hero svg.hov .gnode{opacity:.5}.hero svg.hov .gnode.hot{opacity:1}.hero svg.hov .gnode.off{opacity:.2}
+
+/* detail section on white paper */
+#detail{padding-top:6px;scroll-margin-top:12px}
+.panel{position:static;max-height:none;border:0;padding:0;margin-top:22px;overflow:visible}
+.panel .search{max-width:420px}
+.panel .items{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));column-gap:30px;border-top:2px solid var(--gold)}
+.panel .items li:first-child{border-top:1px solid var(--rule)}
+.panel h2{font-size:34px}
+.over{margin-top:34px}
+
+@media (max-width:900px){
+  .hero .mapbox{display:none}
+  .nav{display:block}
+  .panel .items{grid-template-columns:minmax(0,1fr)}
+}
+
+</style>
+
+<style>
+.hero-in{position:relative}
+.hcard{position:absolute;top:56px;width:min(420px,34%);max-height:calc(100% - 128px);display:flex;flex-direction:column;background:var(--bg);color:var(--ink);border-radius:12px;border-top:3px solid var(--gold);box-shadow:0 18px 50px rgba(0,0,0,.45);padding:16px 18px 14px;z-index:20}
+.hcard.l{left:12px}.hcard.r{right:12px}
+.hcard.prev{pointer-events:none}
+.hcard .hk{font:600 11px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold-ink)}
+.hcard h3{font:600 28px/1.05 var(--serif);margin:2px 0 4px}
+.hcard .hh{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.hcard .x{font-size:22px;line-height:1;border:0;background:none;color:var(--muted);cursor:pointer;padding:2px 6px}
+.hcard .bl{color:var(--muted);font-size:13px;margin:0 0 8px}
+.hcard .items{overflow:auto;flex:1;min-height:0;border-top:2px solid var(--gold)}
+.hcard .items li{padding:8px 0}
+.hcard .items .u{font-size:12.5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.hcard.pin .items .u{display:block;-webkit-line-clamp:unset}
+.hcard .ft{margin-top:8px;font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;gap:8px;align-items:center}
+.hcard .ft button{font:500 12.5px var(--sans);border:1px solid var(--navy);background:none;color:var(--ink);border-radius:999px;padding:5px 12px;cursor:pointer}
+@media (max-width:900px){.hcard{display:none}}
 </style>
 </head>
 <body>
 <div class="wrap">
 <header>
-  <h1>Claude Ecosystem Toolbox</h1>
-  <p class="sub">Every skill, plugin, connector and local tool on your account, sorted by where it works: Claude chat, Claude Code, or both. Use the map to see what you own, and the planner to see what a project needs.</p>
-  <p class="scan" id="scan">Loading toolbox…</p>
-</header>
-
-<div class="bar">
+  <div>
+    <h1>Claude Ecosystem Toolbox</h1>
+    <p class="sub">Every skill, plugin, connector and local tool on your account, sorted by where it works: Claude chat, Claude Code, or both.</p>
+    <p class="scan" id="scan">Loading toolbox…</p>
+  </div>
   <div class="seg" role="group" aria-label="View">
     <button id="v-map" aria-pressed="true" type="button">Map</button>
     <button id="v-plan" aria-pressed="false" type="button">Project planner</button>
   </div>
-  <div class="legend" aria-label="Legend">
-    <span><i class="b b-chat">Chat</i> works in Claude chat</span>
-    <span><i class="b b-code">Code</i> needs Claude Code / your Mac</span>
-    <span><i class="b b-both">Both</i> works in either</span>
-    <span><i class="dot ok"></i> confirmed</span>
-    <span><i class="dot guess"></i> best guess</span>
-  </div>
+</header>
 </div>
-
 <section id="map-view">
-  <div class="filters" style="margin-bottom:12px" role="group" aria-label="Platform filter">
-    <span class="lab">Show</span>
-    <button class="chip" type="button" data-f="all" aria-pressed="true">Everything</button>
-    <button class="chip" type="button" data-f="chat" aria-pressed="false">Works in Chat</button>
-    <button class="chip" type="button" data-f="code" aria-pressed="false">Works in Code</button>
-    <button class="chip" type="button" data-f="both" aria-pressed="false">Works in both</button>
-  </div>
-  <div class="grid">
-    <div>
-      <div class="mapbox" id="mapbox"></div>
-      <div class="nav" id="nav"></div>
+  <div class="hero"><div class="hero-in">
+    <div class="hero-top">
+      <div class="filters" role="group" aria-label="Platform filter">
+        <span class="lab">Show</span>
+        <button class="chip" type="button" data-f="all" aria-pressed="true">Everything</button>
+        <button class="chip" type="button" data-f="chat" aria-pressed="false">Works in Chat</button>
+        <button class="chip" type="button" data-f="code" aria-pressed="false">Works in Code</button>
+        <button class="chip" type="button" data-f="both" aria-pressed="false">Works in both</button>
+      </div>
     </div>
-    <aside class="panel" id="panel" aria-live="polite"></aside>
-  </div>
-
-  <div class="over">
-    <h2>Overlaps worth pruning</h2>
-    <p class="lead">These do the same job more than once. Keeping one primary per job makes it easier to know which tool to reach for.</p>
-    <div class="ovgrid">
-      <div class="ov"><b>Five website builders</b><span>hallmark (local), AnimatedWebs plugin, 8B Website Builder, motionsites-web-builder, frontend-design. Suggested split: web-build-brief for the brief, one of hallmark or AnimatedWebs to design, frontend-design to polish.</span></div>
-      <div class="ov"><b>Remotion installed twice</b><span>The Remotion plugin and the local remotion-best-practices skill come from the same source (remotion-dev/skills). One is enough.</span></div>
-      <div class="ov"><b>frontend-design appears three times</b><span>As a built-in skill, as a plugin, and as a plugin-prefixed skill. They behave the same.</span></div>
-      <div class="ov"><b>Marketing: plugin and your skills</b><span>The Marketing plugin's email-sequence and content skills overlap your own copywriting, email-sequence and social-content skills.</span></div>
-      <div class="ov"><b>Notion in three layers</b><span>Connector = access, Notion plugin = generic commands, notion-filer = your house rules. Use notion-filer for filing so titles and parents stay consistent.</span></div>
+    <div class="mapbox" id="mapbox"></div>
+    <div class="hcard" id="hcard" hidden></div>
+    <div class="nav" id="nav"></div>
+    <div class="legend" aria-label="Legend">
+      <span><i class="sw" style="background:var(--h-chat)"></i>Chat: works in Claude chat</span>
+      <span><i class="sw" style="background:var(--h-code)"></i>Code: needs Claude Code / your Mac</span>
+      <span><i class="sw" style="background:var(--h-both)"></i>Both: works in either</span>
+      <span><i class="dot ok"></i>confirmed</span>
+      <span><i class="dot guess"></i>best guess</span>
+    </div>
+  </div></div>
+  <div class="wrap">
+    <div id="detail"><aside class="panel" id="panel" aria-live="polite"></aside></div>
+    <div class="over">
+      <h2>Overlaps worth pruning</h2>
+      <p class="lead">These do the same job more than once. Keeping one primary per job makes it easier to know which tool to reach for.</p>
+      <div class="ovgrid">
+        <div class="ov"><b>Five website builders</b><span>hallmark (local), AnimatedWebs plugin, 8B Website Builder, motionsites-web-builder, frontend-design.</span></div>
+        <div class="ov"><b>Remotion installed twice</b><span>The Remotion plugin and the local remotion-best-practices skill share a source. One is enough.</span></div>
+        <div class="ov"><b>Notion in three layers</b><span>Connector = access, Notion plugin = generic commands, notion-filer = your house rules.</span></div>
+      </div>
     </div>
   </div>
 </section>
-
-<section id="plan-view" hidden>
+<section id="plan-view" hidden><div class="wrap" style="padding-top:8px">
   <div class="pick" id="pick" role="group" aria-label="Project type"></div>
   <div class="pl" id="pl"></div>
-</section>
-
-<footer>
-  Confirmed means the platform is stated in the tool's own description, its files on your Mac, or its connection in this session. Best guess means it was inferred from what the tool does. Claude Code's main settings folder is protected from this session, so any plugin or skill that exists only there will not appear until it is added to your account or to ~/.agents. To refresh, run the scanner in Claude Code (see README.md); new tools appear here tagged NEW.
-</footer>
-</div>
-
+</div></section>
+<div class="wrap"><footer>Confirmed means the platform is stated in the tool's own description, its files on your Mac, or its connection in this session. Best guess means it was inferred from what the tool does. To refresh, run the scanner in Claude Code (see README.md); new tools appear here tagged NEW.</footer></div>
 <script>
-/* ---------- data: loaded from toolbox.json + overrides.json ---------- */
+/* Shared by every design option: data loading, filters, detail panel, planner.
+   A design only supplies window VIEW = { init(), render(), scrollOnPick } */
 let GROUPS=[], PROJECTS=[], META={};
 const CATS={skills:'Skills',plugins:'Plugins',connectors:'Connectors',local:'On your Mac'};
+const ORDER=['skills','plugins','connectors','local'];
 const LABEL={chat:'Chat',code:'Code',both:'Both'};
-// item array: [name, platform, use, confirmed(1|0), status]
+const SIDE={chat:'Chat',code:'Code'};
+const REDUCE=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ---------- helpers ---------- */
 const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 const $=id=>document.getElementById(id);
 let filter='all', sel='venture', query='', proj='site';
@@ -199,48 +269,10 @@ const conf=c=>'<i class="dot '+(c?'ok':'guess')+'" title="'+(c?'Confirmed':'Best
 const visItems=g=>g.items.filter(i=>okFor(i[1],filter));
 const counts=g=>{const o={chat:0,code:0,both:0};visItems(g).forEach(i=>o[i[1]]++);return o;};
 
-/* ---------- radial map ---------- */
-function layout(){
-  const order=['skills','plugins','connectors','local'], list=[];
-  order.forEach(c=>GROUPS.filter(g=>g.cat===c).forEach(g=>list.push(g)));
-  const n=list.length, cx=620, cy=400, rx=545, ry=330;
-  list.forEach((g,i)=>{const a=(-90+(i+.5)*360/n)*Math.PI/180;g.a=a;g.x=cx+rx*Math.cos(a);g.y=cy+ry*Math.sin(a);});
-  const cats=order.map(c=>{const gs=list.filter(g=>g.cat===c);const a=gs.reduce((s,g)=>s+g.a,0)/gs.length;
-    return {id:c,x:cx+205*Math.cos(a),y:cy+135*Math.sin(a)};});
-  return {list,cats,cx,cy};
-}
-let L;
-function lines(name){
-  if(name.length<=13) return [name];
-  const mid=name.length/2; let best=-1,d=1e9;
-  for(let i=0;i<name.length;i++){ if(name[i]===' '||name[i]==='&'&&false){const k=Math.abs(i-mid); if(k<d){d=k;best=i;}} }
-  if(best<0) return [name];
-  return [name.slice(0,best).trim(), name.slice(best).trim()];
-}
-function renderMap(){
-  let s='<svg viewBox="0 0 1240 810" role="img" aria-label="Radial map of your Claude ecosystem grouped by type">';
-  L.cats.forEach(c=>{s+='<line class="edge" x1="'+L.cx+'" y1="'+L.cy+'" x2="'+c.x+'" y2="'+c.y+'"/>';});
-  L.list.forEach(g=>{const c=L.cats.find(k=>k.id===g.cat);s+='<line class="edge" x1="'+c.x+'" y1="'+c.y+'" x2="'+g.x+'" y2="'+g.y+'"/>';});
-  s+='<circle class="core" cx="'+L.cx+'" cy="'+L.cy+'" r="70"/><text class="coretxt" x="'+L.cx+'" y="'+(L.cy-2)+'">Your</text><text class="coretxt" x="'+L.cx+'" y="'+(L.cy+20)+'">Toolbox</text>';
-  L.cats.forEach(c=>{s+='<ellipse class="cat" cx="'+c.x+'" cy="'+c.y+'" rx="66" ry="27"/><text class="cattxt" x="'+c.x+'" y="'+(c.y+6)+'">'+esc(CATS[c.id])+'</text>';});
-  L.list.forEach(g=>{
-    const cn=counts(g), tot=cn.chat+cn.code+cn.both, off=tot===0;
-    const ls=lines(g.name), w=118, h=54;
-    s+='<g class="gnode'+(g.id===sel?' sel':'')+(off?' off':'')+'" data-g="'+g.id+'" tabindex="0" role="button" aria-label="'+esc(g.name)+', '+tot+(tot===1?' item':' items')+'" transform="translate('+g.x.toFixed(1)+','+g.y.toFixed(1)+')">';
-    s+='<rect class="pill" x="'+(-w/2)+'" y="'+(-h/2)+'" width="'+w+'" height="'+h+'" rx="9"/>';
-    if(ls.length===1){s+='<text class="gtxt" y="-4">'+esc(ls[0])+'</text>';}
-    else{s+='<text class="gtxt" y="-9">'+esc(ls[0])+'</text><text class="gtxt" y="7">'+esc(ls[1])+'</text>';}
-    s+='<text class="gcount" y="'+(ls.length===1?12:17)+'" '+(ls.length===1?'':'style="display:none"')+'>'+tot+(tot===1?' item':' items')+'</text>';
-    if(tot>0){let x=-w/2+10;const bw=w-20;
-      [['chat','s-chat'],['code','s-code'],['both','s-both']].forEach(k=>{const ww=bw*cn[k[0]]/tot;if(ww>0){s+='<rect class="'+k[1]+'" x="'+x.toFixed(1)+'" y="'+(h/2-9)+'" width="'+ww.toFixed(1)+'" height="4" rx="2"/>';x+=ww;}});}
-    s+='</g>';
-  });
-  s+='</svg>';
-  $('mapbox').innerHTML=s;
-}
 function renderNav(){
+  const el=$('nav'); if(!el) return;
   let s='';
-  ['skills','plugins','connectors','local'].forEach(c=>{
+  ORDER.forEach(c=>{
     s+='<div class="navcat">'+esc(CATS[c])+'</div><div class="navbtns">';
     GROUPS.filter(g=>g.cat===c).forEach(g=>{
       const t=visItems(g).length;
@@ -248,13 +280,11 @@ function renderNav(){
     });
     s+='</div>';
   });
-  $('nav').innerHTML=s;
+  el.innerHTML=s;
 }
-const SIDE={chat:'Chat',code:'Code'};
 function seenNote(i){
   const b=i[5]; if(!b||!b.length) return '';
-  const where=b.map(x=>SIDE[x]).join(' + ');
-  let t='Seen in: '+where;
+  let t='Seen in: '+b.map(x=>SIDE[x]).join(' + ');
   if(b.length===2&&i[1]!=='both') t+=' · installed in both, works best in '+LABEL[i[1]];
   return '<span class="seen">'+esc(t)+'</span>';
 }
@@ -279,12 +309,16 @@ function renderPanel(){
   const q2=$('q'); q2.addEventListener('input',e=>{query=e.target.value;renderPanel();});
   if(keep){q2.focus();q2.setSelectionRange(q2.value.length,q2.value.length);}
 }
-function renderAll(){
-  renderMap();renderNav();renderPanel();
+function refresh(){
+  renderNav();renderPanel();VIEW.render();
   document.querySelectorAll('[data-f]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.f===filter));
 }
+function toDetail(){ const d=$('detail'); if(d) d.scrollIntoView({behavior:REDUCE?'auto':'smooth',block:'start'}); }
+function select(id,opts){
+  sel=id;query='';refresh();
+  if(opts&&opts.scroll) toDetail();
+}
 
-/* ---------- planner ---------- */
 function renderPlanner(){
   $('pick').innerHTML=PROJECTS.map(p=>'<button type="button" class="chip" data-p="'+p.id+'" aria-pressed="'+(p.id===proj)+'">'+esc(p.name)+'</button>').join('');
   const p=PROJECTS.find(x=>x.id===proj)||PROJECTS[0];
@@ -294,14 +328,13 @@ function renderPlanner(){
     col('chat','Plan and create in Chat')+col('code','Build and test in Claude Code')+col('either','Works in either')+'</div><p class="steps">'+esc(p.steps)+'</p>';
 }
 
-/* ---------- events & routing ---------- */
 document.addEventListener('click',e=>{
-  const g=e.target.closest('[data-g]'); if(g){sel=g.dataset.g;query='';renderAll();return;}
-  const f=e.target.closest('[data-f]'); if(f){filter=f.dataset.f;renderAll();return;}
+  const g=e.target.closest('[data-g]'); if(g){select(g.dataset.g,{scroll:VIEW.scrollOnPick||g.classList.contains('chip')});return;}
+  const f=e.target.closest('[data-f]'); if(f){filter=f.dataset.f;refresh();return;}
   const p=e.target.closest('[data-p]'); if(p){proj=p.dataset.p;renderPlanner();return;}
 });
 document.addEventListener('keydown',e=>{
-  if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('g[data-g]')){e.preventDefault();sel=e.target.dataset.g;query='';renderAll();}
+  if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('g[data-g]')){e.preventDefault();select(e.target.dataset.g,{scroll:VIEW.scrollOnPick});}
 });
 function setView(v){
   const plan=v==='planner';
@@ -323,17 +356,105 @@ async function boot(){
     PROJECTS=t.projects.map(p=>({id:p.id,name:p.name,why:p.why,steps:p.steps,items:p.items.map(i=>[i.name,i.where,i.use])}));
     if(!GROUPS.some(g=>g.id===sel)) sel=GROUPS[0].id;
     if(!PROJECTS.some(p=>p.id===proj)) proj=PROJECTS[0].id;
-    L=layout();
+    VIEW.init&&VIEW.init();
     const n=GROUPS.reduce((s,g)=>s+g.items.length,0), nw=GROUPS.reduce((s,g)=>s+g.items.filter(i=>i[4]==='new').length,0);
     $('scan').textContent='Last scanned '+t.scanned+' · '+n+' tools in '+GROUPS.length+' groups'+(nw?' · '+nw+' new since the last scan':'')+(t.sources&&t.sources.code?'':' · Claude Code side not scanned yet');
-    renderAll();renderPlanner();
+    refresh();renderPlanner();
   }catch(e){
     $('scan').textContent='';
-    $('mapbox').innerHTML='<div class="err">Could not load toolbox.json ('+esc(e.message)+'). Open this page from a web server, not as a file: run <b>npx serve</b> in this folder, or deploy it.</div>';
+    const m=$('mapbox')||$('wheel');
+    if(m) m.innerHTML='<div class="err">Could not load toolbox.json ('+esc(e.message)+'). Open this page from a web server, not as a file.</div>';
   }
 }
 setView(location.hash==='#planner'?'planner':'map');
 boot();
+
+</script>
+<script>
+/* Option A: radial map, full width, hop-by-hop path lighting */
+let L, hoverId=null, pinned=false;
+const VIEW={
+  scrollOnPick:false,
+  init(){L=layout();},
+  render(){hoverId=null;renderMap();paint(sel);card();}
+};
+function layout(){
+  const list=[];
+  ORDER.forEach(c=>GROUPS.filter(g=>g.cat===c).forEach(g=>list.push(g)));
+  const n=list.length, cx=800, cy=400, rx=720, ry=330;
+  list.forEach((g,i)=>{const a=(-90+(i+.5)*360/n)*Math.PI/180;g.a=a;g.x=cx+rx*Math.cos(a);g.y=cy+ry*Math.sin(a);});
+  const cats=ORDER.map(c=>{const gs=list.filter(g=>g.cat===c);const a=gs.reduce((s,g)=>s+g.a,0)/gs.length;
+    return {id:c,x:cx+300*Math.cos(a),y:cy+150*Math.sin(a)};});
+  return {list,cats,cx,cy};
+}
+function lines(name){
+  if(name.length<=13) return [name];
+  const mid=name.length/2; let best=-1,d=1e9;
+  for(let i=0;i<name.length;i++){ if(name[i]===' '){const k=Math.abs(i-mid); if(k<d){d=k;best=i;}} }
+  return best<0?[name]:[name.slice(0,best).trim(), name.slice(best).trim()];
+}
+function renderMap(){
+  let s='<svg viewBox="0 0 1600 800" role="img" aria-label="Radial map of your Claude ecosystem grouped by type">';
+  L.cats.forEach(c=>{s+='<line class="edge" data-e="c:'+c.id+'" x1="'+L.cx+'" y1="'+L.cy+'" x2="'+c.x.toFixed(1)+'" y2="'+c.y.toFixed(1)+'"/>';});
+  L.list.forEach(g=>{const c=L.cats.find(k=>k.id===g.cat);s+='<line class="edge" data-e="g:'+g.id+'" x1="'+c.x.toFixed(1)+'" y1="'+c.y.toFixed(1)+'" x2="'+g.x.toFixed(1)+'" y2="'+g.y.toFixed(1)+'"/>';});
+  s+='<circle class="core" cx="'+L.cx+'" cy="'+L.cy+'" r="72"/><text class="coretxt" x="'+L.cx+'" y="'+(L.cy-2)+'" style="font-size:24px">Your</text><text class="coretxt" x="'+L.cx+'" y="'+(L.cy+22)+'" style="font-size:24px">Toolbox</text>';
+  L.cats.forEach(c=>{s+='<ellipse class="cat" cx="'+c.x.toFixed(1)+'" cy="'+c.y.toFixed(1)+'" rx="72" ry="29"/><text class="cattxt" x="'+c.x.toFixed(1)+'" y="'+(c.y+6).toFixed(1)+'">'+esc(CATS[c.id])+'</text>';});
+  L.list.forEach(g=>{
+    const cn=counts(g), tot=cn.chat+cn.code+cn.both, off=tot===0;
+    const ls=lines(g.name), w=120, h=52;
+    s+='<g class="gnode'+(g.id===sel?' sel':'')+(off?' off':'')+'" data-g="'+g.id+'" tabindex="0" role="button" aria-label="'+esc(g.name)+', '+tot+(tot===1?' item':' items')+'" transform="translate('+g.x.toFixed(1)+','+g.y.toFixed(1)+')">';
+    s+='<rect class="pill" x="'+(-w/2)+'" y="'+(-h/2)+'" width="'+w+'" height="'+h+'" rx="9"/>';
+    s+=ls.length===1?'<text class="gtxt" y="-2">'+esc(ls[0])+'</text>':'<text class="gtxt" y="-8">'+esc(ls[0])+'</text><text class="gtxt" y="8">'+esc(ls[1])+'</text>';
+    if(tot>0){let x=-w/2+10;const bw=w-20;
+      [['chat','s-chat'],['code','s-code'],['both','s-both']].forEach(k=>{const ww=bw*cn[k[0]]/tot;if(ww>0){s+='<rect class="'+k[1]+'" x="'+x.toFixed(1)+'" y="'+(h/2-9)+'" width="'+ww.toFixed(1)+'" height="4" rx="2"/>';x+=ww;}});}
+    s+='</g>';
+  });
+  s+='</svg>';
+  $('mapbox').innerHTML=s;
+}
+/* light the path core → category → group (second hop slightly later) */
+function paint(id){
+  const svg=document.querySelector('#mapbox svg'); if(!svg) return;
+  svg.querySelectorAll('.edge.lit').forEach(e=>e.classList.remove('lit','hop2'));
+  const g=GROUPS.find(x=>x.id===id); if(!g) return;
+  const a=svg.querySelector('[data-e="c:'+g.cat+'"]'); if(a) a.classList.add('lit');
+  const b=svg.querySelector('[data-e="g:'+g.id+'"]'); if(b) b.classList.add('lit','hop2');
+}
+function hover(on,node){
+  const svg=document.querySelector('#mapbox svg'); if(!svg) return;
+  svg.querySelectorAll('.gnode.hot').forEach(n=>n.classList.remove('hot'));
+  if(on){svg.classList.add('hov');node.classList.add('hot');paint(node.dataset.g);hoverId=node.dataset.g;}
+  else{svg.classList.remove('hov');paint(sel);hoverId=null;}
+  card();
+}
+/* list card inside the hero: hover previews a group, click pins it */
+function card(){
+  const el=$('hcard'); if(!el) return;
+  const id=hoverId||(pinned?sel:null);
+  if(!id){el.hidden=true;return;}
+  const g=GROUPS.find(x=>x.id===id); if(!g){el.hidden=true;return;}
+  const its=visItems(g), pin=!hoverId, lim=pin?its.length:5;
+  const lg=L.list.find(x=>x.id===id);
+  el.className='hcard '+(lg&&lg.x>800?'l':'r')+(pin?' pin':' prev');
+  el.innerHTML='<div class="hh"><div><div class="hk">'+esc(CATS[g.cat])+' · '+its.length+(its.length===1?' tool':' tools')+'</div><h3>'+esc(g.name)+'</h3></div>'+(pin?'<button class="x" type="button" data-x aria-label="Close list">×</button>':'')+'</div>'+
+    '<p class="bl">'+esc(g.blurb)+'</p>'+
+    (its.length?'<ul class="items">'+its.slice(0,lim).map(i=>itemLi(i)).join('')+'</ul>':'<div class="empty">Nothing here works in this mode.</div>')+
+    '<div class="ft">'+(pin?'<span>Scroll the list for more</span><button type="button" data-down>Full details below ↓</button>':'<span>'+(its.length>lim?'+ '+(its.length-lim)+' more · ':'')+'Click to pin this list</span>')+'</div>';
+  el.hidden=false;
+}
+$('hcard').addEventListener('click',e=>{
+  if(e.target.closest('[data-x]')){pinned=false;card();}
+  if(e.target.closest('[data-down]')) toDetail();
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&pinned){pinned=false;card();}});
+const mb=$('mapbox');
+mb.addEventListener('click',e=>{if(e.target.closest('.gnode'))pinned=true;},true);
+mb.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.closest&&e.target.closest('.gnode'))pinned=true;},true);
+mb.addEventListener('mouseover',e=>{const n=e.target.closest('.gnode');if(n)hover(true,n);});
+mb.addEventListener('mouseout',e=>{if(!e.relatedTarget||!e.relatedTarget.closest||!e.relatedTarget.closest('.gnode'))hover(false);});
+mb.addEventListener('focusin',e=>{const n=e.target.closest&&e.target.closest('.gnode');if(n)hover(true,n);});
+mb.addEventListener('focusout',()=>hover(false));
+
 </script>
 </body>
 </html>
