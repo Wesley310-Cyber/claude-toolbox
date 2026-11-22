@@ -1,3 +1,8 @@
 # Static site: no build step. Deploy as a private draft first, go public only at launch.
 [build]
   publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
